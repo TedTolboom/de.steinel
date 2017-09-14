@@ -1,0 +1,320 @@
+{
+	"id": "IS_140_2",
+	"class": "sensor",
+	"name": {
+		"en": "IS 140-2 Z-Wave"
+	},
+	"capabilities": [
+		"onoff",
+		"measure_luminance",
+		"alarm_motion"
+	],
+	"images": {
+		"large": "/drivers/IS_140_2/assets/images/large.png",
+		"small": "/drivers/IS_140_2/assets/images/small.png"
+	},
+	"zwave": {
+		"manufacturerId": [
+			625
+		],
+		"productTypeId": [
+			2
+		],
+		"productId": [
+			6770
+		],
+		"wakeUpInterval": 3600,
+		"learnmode": {
+			"instruction": {
+				"en": "Inclusion = Add\r\n\r\nTo start the motion detector's inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\\r\n4) To put the device into inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The status LED (F) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed."
+			}
+		},
+		"productDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2310/IS140-2Z-Wave_5spr_110050437_11.04.17.pdf",
+		"zwaveAllianceProductId": 2310,
+		"imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17045540",
+		"associationGroups": [
+			1
+		],
+		"associationGroupsOptions": {
+			"1": {
+				"hint": {
+					"en": "Z-Wave Plus Lifeline group"
+				}
+			},
+			"2": {
+				"hint": {
+					"en": "Group 2 is used for directly controlling Z-Wave devices via BASIC SET commands through the evaluation of movement and light as with internal use (so that all of these devices work together). This is intended for use especially with third-party devices that do not implement reactions for mo- tion events."
+				}
+			},
+			"3": {
+				"hint": {
+					"en": "Group 3 sends Notification reports (MOTION_BEGIN and MOTION_END frames."
+				}
+			},
+			"4": {
+				"hint": {
+					"en": "Ambient Light via group 4 is intended to substitute locally measured LUX values in target devices – so that the network can have one source of ambient light value. The frame rate is a value being sent a maximum of once per 2.5 minutes, and a minimum of once per 15 minutes."
+				}
+			}
+		},
+		"unlearnmode": {
+			"instruction": {
+				"en": "Exclusion = Remove\r\n\r\nTo start the motion detector's exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\r\nRemoving IS 140-2 from the Smart Friends system:\r\n1) In the rooms view, activate the edit mode.\r\n2) Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3) To put the device into exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The red status LED (F) lights up to show that this mode is selected.\r\n4) The app displays a confirmation message once exclusion has been successfully completed."
+			}
+		}
+	},
+	"settings": [
+		{
+			"id": "Light_duration",
+			"value": 180,
+			"label": {
+				"en": "On duration"
+			},
+			"hint": {
+				"en": "Duration of light after motion detection."
+			},
+			"zwave": {
+				"index": 1,
+				"size": 2
+			},
+			"attr": {
+				"min": 5,
+				"max": 900
+			},
+			"type": "number"
+		},
+		{
+			"id": "illumination_threshold",
+			"value": 2000,
+			"label": {
+				"en": "Illumination Threshold (Lux)"
+			},
+			"hint": {
+				"en": "Light threshold [ lx ] Value can be controlled via potentiometer – potentiometer value is used as the default value and any potentiometer movement rewrites the current setting.\n 0 = run Learn ambient light sequence (the level is set automatically)\n2000 - is used as daylight ( always night mode)"
+			},
+			"zwave": {
+				"index": 2,
+				"size": 2
+			},
+			"attr": {
+				"min": 0,
+				"max": 2000
+			},
+			"type": "number"
+		},
+		{
+			"id": "motion_sensor_sensitivity",
+			"value": 100,
+			"label": {
+				"en": "Motion Sensor (PIR) Sensitivity [%]"
+			},
+			"hint": {
+				"en": "Motion Sensor (PIR) Sensitivity [%]\r\n\r\nValue can be controlled via potentiometer – potentiometer value is\r\nused as the default value and any potentiometer movement rewrites\r\nthe current setting"
+			},
+			"zwave": {
+				"index": 5,
+				"size": 1
+			},
+			"attr": {
+				"min": 2,
+				"max": 100
+			},
+			"type": "number"
+		},
+		{
+			"id": "external_ambient_light",
+			"value": true,
+			"label": {
+				"en": "Use External Ambient Light Value"
+			},
+			"hint": {
+				"en": "When GLOBAL_LIGHT mode is ON – device overrides its own light\r\nsensor values and uses Light report values from any Z-Wave light\r\nsensor instead – this has to be configured appropriately to send light\r\nautomatically.\r\nIf the last remote light level value is older than 30 minutes, the internal\r\nlight value is used again until the next external value is received."
+			},
+			"zwave": {
+				"index": 8,
+				"size": 1
+			},
+			"type": "checkbox"
+		},
+		{
+			"id": "slave_mode",
+			"value": "2",
+			"label": {
+				"en": "Disable local control"
+			},
+			"hint": {
+				"en": "Can disable sensor controll\r\n\r\n“Stupid” mode (bit 2 = 1):\r\n - has higher priority then slave mode.\r\n - lamp is permanently on (usefull for simple power wall switch controlling).\r\n\r\nSlave mode ( bit 0 = 1 ):\r\n- only if included in Z-Wave network\r\n- usefull for controlling via third-party sensor\r\n- lamp is directly controlled via Z-Wave, internal sensors are not used for controlling it.\r\nCentral unit checking ( bit 1 = 1 ):\r\n( usefull especialy for controlling via gateway ) When Slave bit is 0:\r\n- lamp signalises fail of lifeline connection ( if this bit is zero fail of lifeline connection is not signalised ) When slave bit is 1:\r\n- lamp checks presence of Z-Wave device in lifeline group ( gateway ). If it is not present for 2 minutes ( testing repeatedly every 30 seconds ) device switches to normal mode in the same way as after the end of local disabled mode ( ON_BEHAVIOUR )\r\n- The device checks every 1 minute for recovery of Lifeline connection.\r\n- if no lifeline specified - it works in normal mode\r\n\r\nBe careful with this option, lamp stops using it’s own motion sensor in Slave and Stupid mode."
+			},
+			"zwave": {
+				"index": 9,
+				"size": 1
+			},
+			"values": [
+				{
+					"id": "0",
+					"label": {
+						"en": "Normal mode"
+					}
+				},
+				{
+					"id": "1",
+					"label": {
+						"en": "Slave mode without gateway checking"
+					}
+				},
+				{
+					"id": "2",
+					"label": {
+						"en": "Normal mode with lifeline error signalisation"
+					}
+				},
+				{
+					"id": "3",
+					"label": {
+						"en": "Slave mode with gateway checking"
+					}
+				},
+				{
+					"id": "4",
+					"label": {
+						"en": "Stupid mode - lamp permanetly on"
+					}
+				}
+			],
+			"type": "dropdown"
+		},
+		{
+			"id": "off_behaviour",
+			"value": 10,
+			"label": {
+				"en": "Behaviour after BASIC OFF"
+			},
+			"hint": {
+				"en": "\n0 = Lamp is switched off.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\nLamp is switched off for TIME"
+			},
+			"zwave": {
+				"index": 10,
+				"size": 2
+			},
+			"attr": {
+				"min": 0,
+				"max": 255
+			},
+			"type": "number"
+		},
+		{
+			"id": "on_behaviour",
+			"value": 255,
+			"label": {
+				"en": "Behaviour after BASIC ON (and similar commands)."
+			},
+			"hint": {
+				"en": "\n0 = Lamp is switched on.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255, Lamp is switched on for TIME"
+			},
+			"zwave": {
+				"index": 11,
+				"size": 2
+			},
+			"attr": {
+				"min": 0,
+				"max": 255
+			},
+			"type": "number"
+			},
+		{
+			"id": "on_time_over",
+			"value": 204,
+			"label": {
+				"en": "On behavior time over (timeout)"
+			},
+			"hint": {
+				"en": "Time limit to stop waiting for motion after timeout of ON_BEHAVIOUR\r\nor OFF_ON_BEHAVIOUR\n0 = Stop waiting just after timeout..\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255, Never stop waiting before motion."
+			},
+			"zwave": {
+				"index": 12,
+				"size": 2
+			},
+			"attr": {
+				"min": 0,
+				"max": 255
+			},
+			"type": "number"
+		},
+		{
+			"id": "on_off_behavior",
+			"value": 204,
+			"label": {
+				"en": "Behaviour after after a rapid sequence of BASIC ON and BASIC OFF commands"
+			},
+			"hint": {
+				"en": "\n0 = Lamp is switched on.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255, device ignores OFF - ON sequence and uses OFF behaviour."
+			},
+			"zwave": {
+				"index": 13,
+				"size": 2
+			},
+			"attr": {
+				"min": 0,
+				"max": 255
+			},
+			"type": "number"
+		},
+		{
+			"id": "off_on_behavior",
+			"value": 204,
+			"label": {
+				"en": "Behaviour after after a rapid sequence of BASIC OFF and BASIC ON commands"
+			},
+			"hint": {
+				"en": "\n0 = Lamp is switched OFF.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255, device ignores OFF - ON sequence and uses ON bahaviour."
+			},
+			"zwave": {
+				"index": 14,
+				"size": 2
+			},
+			"attr": {
+				"min": 0,
+				"max": 255
+			},
+			"type": "number"
+		},
+		{
+			"id": "sequence_time",
+			"value": 10,
+			"label": {
+				"en": "Maximum delay"
+			},
+			"hint": {
+				"en": "Time in [ 100 miliseconds ] of maximum delay between BASIC ON\r\nand BASIC OFF ( and vice versa ) to consider this as a sequence. It is\r\ntypically 1 second, but can be exceptionally longer due to retransmissions\r\nand overload – in this case, a longer interval can be allowed ( up\r\nto 5 seconds )."
+			},
+			"zwave": {
+				"index": 15,
+				"size": 1
+			},
+			"attr": {
+				"min": 10,
+				"max": 50
+			},
+			"type": "number"
+		},
+		{
+			"id": "motion_off_timeout",
+			"value": 0,
+			"label": {
+				"en": "Motion off timeout"
+			},
+			"hint": {
+				"en": "\n0 = BASIC SET to Motion endpoint ignored, Motion sensor still enabled.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255, BASIC SET to Motion endpoint ignored, Motion sensor still disabled."
+			},
+			"zwave": {
+				"index": 16,
+				"size": 2
+			},
+			"attr": {
+				"min": 0,
+				"max": 255
+			},
+			"type": "number"
+		}
+	]
+}

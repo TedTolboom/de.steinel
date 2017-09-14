@@ -1,0 +1,25 @@
+{
+	"name": "de.steinel",
+	"version": "0.0.0",
+	"description": "Adds support for Steinel SmartHome products",
+	"main": "app.js",
+	"dependencies": {
+		"homey-log": "^1.0.3",
+		"homey-meshdriver": "^1.0.2"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"run": "homeyConfig compose && athom project --run",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TedTolboom/de.steinel.git"
+	},
+	"author": "Ted Tolboom",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/TedTolboom/de.steinel/issues"
+	},
+	"homepage": "https://github.com/TedTolboom/de.steinel#readme"
+}
