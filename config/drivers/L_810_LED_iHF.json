@@ -25,6 +25,7 @@
 		],
 		"wakeUpInterval": 3600,
 		"learnmode": {
+			"image": "/drivers/L_810_LED_iHF/assets/learnmode.svg",
 			"instruction": {
 				"en": "Inclusion = Add\r\nTo start the light's inclusion mode, briefly press button (8)\r\n\r\nAdding L 810 LED iHF to the Smart Friends system:\r\n1) Download Smart Friends app from the App Store.\r\n2) In the rooms view, activate the edit mode.\r\n3) Select the chosen room and press the \"Add device\" button.\r\n4) Briefly press the device's button (8) to set the light to inclusion mode. The status LED (12) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed."
 			}

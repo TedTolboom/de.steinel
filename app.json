@@ -47,6 +47,7 @@
         ],
         "wakeUpInterval": 3600,
         "learnmode": {
+          "image": "/drivers/IS_140_2/assets/learnmode.svg",
           "instruction": {
             "en": "Inclusion = Add\r\n\r\nTo start the motion detector's inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\\r\n4) To put the device into inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The status LED (F) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed."
           }
@@ -367,6 +368,7 @@
         ],
         "wakeUpInterval": 3600,
         "learnmode": {
+          "image": "/drivers/L_810_LED_iHF/assets/learnmode.svg",
           "instruction": {
             "en": "Inclusion = Add\r\nTo start the light's inclusion mode, briefly press button (8)\r\n\r\nAdding L 810 LED iHF to the Smart Friends system:\r\n1) Download Smart Friends app from the App Store.\r\n2) In the rooms view, activate the edit mode.\r\n3) Select the chosen room and press the \"Add device\" button.\r\n4) Briefly press the device's button (8) to set the light to inclusion mode. The status LED (12) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed."
           }
@@ -725,6 +727,7 @@
         ],
         "wakeUpInterval": 3600,
         "learnmode": {
+          "image": "/drivers/RS_LED_D2/assets/learnmode.svg",
           "instruction": {
             "en": "Inclusion: Add\r\n\r\nAdding RS LED D2 to the Smart Friends system:\r\n1 Download Smart Friends app from the app store.\r\n2 In the rooms view, activate the edit mode.\r\n3 Select the chosen room and press the \"Add device\" button.\r\n4 Briefly press button 5 on the device to set it to inclusion mode. Status LED 8 lights up to show that this mode is selected.\r\n5 The app displays a confirmation message once inclusion has been successfully completed."
           }
@@ -1064,6 +1067,7 @@
         ],
         "wakeUpInterval": 3600,
         "learnmode": {
+          "image": "/drivers/XLED_home_2/assets/learnmode.svg",
           "instruction": {
             "en": "To put the device into inclusion mode, turn the device's control dial (F) to \"Set\" and back to \"0\" within 5 seconds. The status LED (G) lights up to show that this mode is selected.\r\n\r\n\r\nAdding XLED home 2 to the Smart Friends system:\r\n1) Download the Smart Friends app from the app store.\r\n2) In the rooms view, activate the edit mode.\r\n3) Select the chosen room and press the \"Add device\" button.\r\n4) To put the device into inclusion mode, turn the device's control dial (F) to \"Set\" and back to \"0\" within 5 seconds. The status LED (G) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed."
           }

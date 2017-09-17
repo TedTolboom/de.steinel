@@ -25,6 +25,7 @@
 		],
 		"wakeUpInterval": 3600,
 		"learnmode": {
+			"image": "/drivers/RS_LED_D2/assets/learnmode.svg",
 			"instruction": {
 				"en": "Inclusion: Add\r\n\r\nAdding RS LED D2 to the Smart Friends system:\r\n1 Download Smart Friends app from the app store.\r\n2 In the rooms view, activate the edit mode.\r\n3 Select the chosen room and press the \"Add device\" button.\r\n4 Briefly press button 5 on the device to set it to inclusion mode. Status LED 8 lights up to show that this mode is selected.\r\n5 The app displays a confirmation message once inclusion has been successfully completed."
 			}
