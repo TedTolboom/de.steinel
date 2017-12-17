@@ -8,11 +8,19 @@
     "en": "Adds support for Steinel SmartHome products"
   },
   "category": "lights",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Ted Tolboom",
     "email": "dTNL.Homey@gmail.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "TedTolboom",
+        "currency": "EUR"
+      }
+    }
   },
   "images": {
     "large": "/assets/images/large.png",
