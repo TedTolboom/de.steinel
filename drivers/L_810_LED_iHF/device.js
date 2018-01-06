@@ -7,6 +7,7 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 class SteinelL810LED extends ZwaveDevice {
 	onMeshInit() {
 		this.registerCapability('onoff', 'SWITCH_BINARY');
+		this.registerCapability('dim', 'SWITCH_MULTILEVEL');
 		this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
 		this.registerCapability('alarm_motion', 'NOTIFICATION');
 	}

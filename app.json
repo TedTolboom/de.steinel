@@ -357,6 +357,7 @@
       },
       "capabilities": [
         "onoff",
+        "dim",
         "measure_luminance",
         "alarm_motion"
       ],
