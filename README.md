@@ -22,5 +22,9 @@ Please file Pull Requests on the *development* branch of this repository and wit
  Any requests please post them in the [Steinel app topic on the Athom Forum](https://forum.athom.com/discussion/3834/) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)   
 
 ## Change Log:
+### v 0.0.2
+* Added dimming capability for all devices   
+* Updated onoff capability to BASIC CC  
+
 ### v 0.0.1
 * Initial release for testing

@@ -8,7 +8,7 @@
     "en": "Adds support for Steinel SmartHome products"
   },
   "category": "lights",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Ted Tolboom",
@@ -36,12 +36,36 @@
       },
       "capabilities": [
         "onoff",
+        "dim",
         "measure_luminance",
         "alarm_motion"
       ],
       "images": {
         "large": "/drivers/IS_140_2/assets/images/large.png",
         "small": "/drivers/IS_140_2/assets/images/small.png"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
+              "onoff"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_luminance",
+              "alarm_motion"
+            ]
+          },
+          {
+            "id": "slider",
+            "capabilities": [
+              "dim"
+            ]
+          }
+        ]
       },
       "zwave": {
         "manufacturerId": [
@@ -740,12 +764,36 @@
       },
       "capabilities": [
         "onoff",
+        "dim",
         "measure_luminance",
         "alarm_motion"
       ],
       "images": {
         "large": "/drivers/RS_LED_D2/assets/images/large.png",
         "small": "/drivers/RS_LED_D2/assets/images/small.png"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
+              "onoff"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_luminance",
+              "alarm_motion"
+            ]
+          },
+          {
+            "id": "slider",
+            "capabilities": [
+              "dim"
+            ]
+          }
+        ]
       },
       "zwave": {
         "manufacturerId": [
@@ -1080,12 +1128,36 @@
       },
       "capabilities": [
         "onoff",
+        "dim",
         "measure_luminance",
         "alarm_motion"
       ],
       "images": {
         "large": "/drivers/XLED_home_2/assets/images/large.png",
         "small": "/drivers/XLED_home_2/assets/images/small.png"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
+              "onoff"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_luminance",
+              "alarm_motion"
+            ]
+          },
+          {
+            "id": "slider",
+            "capabilities": [
+              "dim"
+            ]
+          }
+        ]
       },
       "zwave": {
         "manufacturerId": [
