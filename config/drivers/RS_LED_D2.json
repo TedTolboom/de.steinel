@@ -6,12 +6,34 @@
 	},
 	"capabilities": [
 		"onoff",
+		"dim",
 		"measure_luminance",
 		"alarm_motion"
 	],
 	"images": {
 		"large": "/drivers/RS_LED_D2/assets/images/large.png",
 		"small": "/drivers/RS_LED_D2/assets/images/small.png"
+	},
+	"mobile": {
+		"components": [
+			{
+				"id": "icon",
+				"capabilities": ["onoff"]
+			},
+			{
+				"id": "sensor",
+				"capabilities": [
+					"measure_luminance",
+					"alarm_motion"
+				]
+			},
+			{
+				"id": "slider",
+				"capabilities": [
+					"dim"
+				]
+			}
+		]
 	},
 	"zwave": {
 		"manufacturerId": [
