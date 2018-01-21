@@ -150,7 +150,7 @@
 				"en": "Brightness measuring interval [minutes]"
 			},
 			"hint": {
-				"en": "Interval for ambient light measuring when lamp is on ( lamp switches\r\noff shortly and measures ). 0=function is off"
+				"en": "Interval for ambient light measuring when lamp is on (lamp switches off shortly and measures). Default: 0 = function is off, Range: 0, 5 - 120 [minutes]"
 			},
 			"zwave": {
 				"index": 6,

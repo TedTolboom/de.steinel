@@ -144,6 +144,25 @@
 			"type": "number"
 		},
 		{
+			"id": "brightness_measure_interval",
+			"value": 0,
+			"label": {
+				"en": "Brightness measuring interval [minutes]"
+			},
+			"hint": {
+				"en": "Interval for ambient light measuring when lamp is on (lamp switches off shortly and measures). Default: 0 = function is off, Range: 0, 5 - 120 [minutes]"
+			},
+			"zwave": {
+				"index": 6,
+				"size": 1
+			},
+			"attr": {
+				"min": 0,
+				"max": 120
+			},
+			"type": "number"
+		},
+		{
 			"id": "external_ambient_light",
 			"value": true,
 			"label": {
@@ -165,7 +184,7 @@
 				"en": "Disable local control"
 			},
 			"hint": {
-				"en": "Can disable sensor controll\r\n\r\n“Stupid” mode (bit 2 = 1):\r\n - has higher priority then slave mode.\r\n - lamp is permanently on (usefull for simple power wall switch controlling).\r\n\r\nSlave mode ( bit 0 = 1 ):\r\n- only if included in Z-Wave network\r\n- usefull for controlling via third-party sensor\r\n- lamp is directly controlled via Z-Wave, internal sensors are not used for controlling it.\r\nCentral unit checking ( bit 1 = 1 ):\r\n( usefull especialy for controlling via gateway ) When Slave bit is 0:\r\n- lamp signalises fail of lifeline connection ( if this bit is zero fail of lifeline connection is not signalised ) When slave bit is 1:\r\n- lamp checks presence of Z-Wave device in lifeline group ( gateway ). If it is not present for 2 minutes ( testing repeatedly every 30 seconds ) device switches to normal mode in the same way as after the end of local disabled mode ( ON_BEHAVIOUR )\r\n- The device checks every 1 minute for recovery of Lifeline connection.\r\n- if no lifeline specified - it works in normal mode\r\n\r\nBe careful with this option, lamp stops using it’s own motion sensor in Slave and Stupid mode."
+				"en": "Can disable sensor controll “Stupid” mode (bit 2 = 1):\r\n - has higher priority then slave mode.\r\n - lamp is permanently on (usefull for simple power wall switch controlling).\r\n\r\nSlave mode ( bit 0 = 1 ):\r\n- only if included in Z-Wave network\r\n- usefull for controlling via third-party sensor\r\n- lamp is directly controlled via Z-Wave, internal sensors are not used for controlling it.\r\nCentral unit checking ( bit 1 = 1 ):\r\n( usefull especialy for controlling via gateway ) When Slave bit is 0:\r\n- lamp signalises fail of lifeline connection ( if this bit is zero fail of lifeline connection is not signalised ) When slave bit is 1:\r\n- lamp checks presence of Z-Wave device in lifeline group ( gateway ). If it is not present for 2 minutes ( testing repeatedly every 30 seconds ) device switches to normal mode in the same way as after the end of local disabled mode ( ON_BEHAVIOUR )\r\n- The device checks every 1 minute for recovery of Lifeline connection.\r\n- if no lifeline specified - it works in normal mode\r\nBe careful with this option, lamp stops using it’s own motion sensor in Slave and Stupid mode."
 			},
 			"zwave": {
 				"index": 9,
