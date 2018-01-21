@@ -7,7 +7,6 @@ const ZwaveDevice = require('homey-meshdriver').ZwaveDevice;
 class SteinhelRSLEDD2 extends ZwaveDevice {
 	onMeshInit() {
 		this.registerCapability('onoff', 'BASIC');
-		this.registerCapability('dim', 'SWITCH_MULTILEVEL');
 		this.registerCapability('measure_luminance', 'SENSOR_MULTILEVEL');
 		this.registerCapability('alarm_motion', 'NOTIFICATION');
 	}

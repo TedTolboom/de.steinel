@@ -36,7 +36,6 @@
       },
       "capabilities": [
         "onoff",
-        "dim",
         "measure_luminance",
         "alarm_motion"
       ],
@@ -60,9 +59,9 @@
             ]
           },
           {
-            "id": "slider",
+            "id": "toggle",
             "capabilities": [
-              "dim"
+              "onoff"
             ]
           }
         ]
@@ -764,7 +763,6 @@
       },
       "capabilities": [
         "onoff",
-        "dim",
         "measure_luminance",
         "alarm_motion"
       ],
@@ -788,9 +786,9 @@
             ]
           },
           {
-            "id": "slider",
+            "id": "toggle",
             "capabilities": [
-              "dim"
+              "onoff"
             ]
           }
         ]
@@ -1128,7 +1126,6 @@
       },
       "capabilities": [
         "onoff",
-        "dim",
         "measure_luminance",
         "alarm_motion"
       ],
@@ -1152,9 +1149,9 @@
             ]
           },
           {
-            "id": "slider",
+            "id": "toggle",
             "capabilities": [
-              "dim"
+              "onoff"
             ]
           }
         ]
