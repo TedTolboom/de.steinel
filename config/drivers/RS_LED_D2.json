@@ -321,7 +321,7 @@
 		},
 		{
 			"id": "sequence_time",
-			"value": 255,
+			"value": 10,
 			"label": {
 				"en": "Maximum delay"
 			},
