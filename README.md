@@ -22,6 +22,9 @@ Please file Pull Requests on the *development* branch of this repository and wit
  Any requests please post them in the [Steinel app topic on the Athom Forum](https://forum.athom.com/discussion/3834/) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)   
 
 ## Change Log:
+### v 0.0.4
+* Administrative update; add link to community forum topic    
+
 ### v 0.0.3
 * Removed dimming capability for all but L810 LED iHF device (updated mobile cards)
 * Check and update all parameters for all devices
