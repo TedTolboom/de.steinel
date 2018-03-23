@@ -8,7 +8,7 @@
 		"en": "Adds support for Steinel SmartHome products"
 	},
 	"category": "lights",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"compatibility": ">=1.5.0",
 	"athomForumDiscussionId": 3834,
 	"author": {
@@ -26,11 +26,127 @@
 		"large": "/assets/images/large.png",
 		"small": "/assets/images/small.png"
 	},
-	"flow": {},
+	"flow": {
+		"triggers": [
+			{
+				"id": "sensor_alarm_motion_on",
+				"title": {
+					"en": "The motion alarm turned on",
+					"nl": "De bewegingsmelder gaat aan"
+				},
+				"args": [
+					{
+						"type": "device",
+						"name": "device",
+						"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+          }
+        ]
+      },
+			{
+				"id": "sensor_alarm_motion_off",
+				"title": {
+					"en": "The motion alarm turned off",
+					"nl": "De bewegingsmelder gaat uit"
+				},
+				"args": [
+					{
+						"type": "device",
+						"name": "device",
+						"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+          }
+        ]
+      },
+			{
+				"id": "sensor_measure_luminance",
+				"title": {
+					"en": "The luminance changed",
+					"nl": "De helderheid is veranderd"
+				},
+				"args": [
+					{
+						"type": "device",
+						"name": "device",
+						"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+          }
+        ],
+				"tokens": [
+					{
+						"name": "luminance",
+						"type": "number",
+						"title": {
+							"en": "luminance",
+							"nl": "helderheid"
+						},
+						"example": 100
+          }
+        ]
+      }
+    ],
+		"conditions": [
+			{
+				"id": "sensor_alarm_motion_is_on",
+				"title": {
+					"en": "The motion alarm is !{{on|off}}",
+					"nl": "De bewegingsmelder is !{{aan|uit}}"
+				},
+				"args": [
+					{
+						"type": "device",
+						"name": "device",
+						"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+          }
+        ]
+      }
+    ],
+		"actions": [
+			{
+				"id": "onoff_turn_on",
+				"title": {
+					"en": "Turn on",
+					"nl": "Zet aan"
+				},
+				"args": [
+					{
+						"type": "device",
+						"name": "device",
+						"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+          }
+        ]
+      },
+			{
+				"id": "onoff_turn_off",
+				"title": {
+					"en": "Turn off",
+					"nl": "Zet uit"
+				},
+				"args": [
+					{
+						"type": "device",
+						"name": "device",
+						"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+          }
+        ]
+      },
+			{
+				"id": "onoff_turn_on_off",
+				"title": {
+					"en": "Toggle on or off",
+					"nl": "Schakel aan of uit"
+				},
+				"args": [
+					{
+						"type": "device",
+						"name": "device",
+						"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+          }
+        ]
+      }
+    ]
+	},
 	"drivers": [
 		{
 			"id": "IS_140_2",
-			"class": "sensor",
+			"class": "light",
 			"name": {
 				"en": "IS 140-2 Z-Wave"
 			},
@@ -42,6 +158,29 @@
 			"images": {
 				"large": "/drivers/IS_140_2/assets/images/large.png",
 				"small": "/drivers/IS_140_2/assets/images/small.png"
+			},
+			"mobile": {
+				"components": [
+					{
+						"id": "icon",
+						"capabilities": [
+              "onoff"
+            ]
+          },
+					{
+						"id": "sensor",
+						"capabilities": [
+              "measure_luminance",
+              "alarm_motion"
+            ]
+          },
+					{
+						"id": "toggle",
+						"capabilities": [
+              "onoff"
+            ]
+          }
+        ]
 			},
 			"zwave": {
 				"manufacturerId": [
@@ -153,6 +292,25 @@
 					"type": "number"
         },
 				{
+					"id": "brightness_measure_interval",
+					"value": 0,
+					"label": {
+						"en": "Brightness measuring interval [minutes]"
+					},
+					"hint": {
+						"en": "Interval for ambient light measuring when lamp is on (lamp switches off shortly and measures). Default: 0 = function is off, Range: 0, 5 - 120 [minutes]"
+					},
+					"zwave": {
+						"index": 6,
+						"size": 1
+					},
+					"attr": {
+						"min": 0,
+						"max": 120
+					},
+					"type": "number"
+        },
+				{
 					"id": "external_ambient_light",
 					"value": true,
 					"label": {
@@ -174,7 +332,7 @@
 						"en": "Disable local control"
 					},
 					"hint": {
-						"en": "Can disable sensor controll\r\n\r\n“Stupid” mode (bit 2 = 1):\r\n - has higher priority then slave mode.\r\n - lamp is permanently on (usefull for simple power wall switch controlling).\r\n\r\nSlave mode ( bit 0 = 1 ):\r\n- only if included in Z-Wave network\r\n- usefull for controlling via third-party sensor\r\n- lamp is directly controlled via Z-Wave, internal sensors are not used for controlling it.\r\nCentral unit checking ( bit 1 = 1 ):\r\n( usefull especialy for controlling via gateway ) When Slave bit is 0:\r\n- lamp signalises fail of lifeline connection ( if this bit is zero fail of lifeline connection is not signalised ) When slave bit is 1:\r\n- lamp checks presence of Z-Wave device in lifeline group ( gateway ). If it is not present for 2 minutes ( testing repeatedly every 30 seconds ) device switches to normal mode in the same way as after the end of local disabled mode ( ON_BEHAVIOUR )\r\n- The device checks every 1 minute for recovery of Lifeline connection.\r\n- if no lifeline specified - it works in normal mode\r\n\r\nBe careful with this option, lamp stops using it’s own motion sensor in Slave and Stupid mode."
+						"en": "Can disable sensor controll “Stupid” mode (bit 2 = 1):\r\n - has higher priority then slave mode.\r\n - lamp is permanently on (usefull for simple power wall switch controlling).\r\n\r\nSlave mode ( bit 0 = 1 ):\r\n- only if included in Z-Wave network\r\n- usefull for controlling via third-party sensor\r\n- lamp is directly controlled via Z-Wave, internal sensors are not used for controlling it.\r\nCentral unit checking ( bit 1 = 1 ):\r\n( usefull especialy for controlling via gateway ) When Slave bit is 0:\r\n- lamp signalises fail of lifeline connection ( if this bit is zero fail of lifeline connection is not signalised ) When slave bit is 1:\r\n- lamp checks presence of Z-Wave device in lifeline group ( gateway ). If it is not present for 2 minutes ( testing repeatedly every 30 seconds ) device switches to normal mode in the same way as after the end of local disabled mode ( ON_BEHAVIOUR )\r\n- The device checks every 1 minute for recovery of Lifeline connection.\r\n- if no lifeline specified - it works in normal mode\r\nBe careful with this option, lamp stops using it’s own motion sensor in Slave and Stupid mode."
 					},
 					"zwave": {
 						"index": 9,
@@ -351,18 +509,52 @@
     },
 		{
 			"id": "L_810_LED_iHF",
-			"class": "sensor",
+			"class": "light",
 			"name": {
 				"en": "L 810 LED iHF Z-Wave"
 			},
 			"capabilities": [
         "onoff",
+        "dim",
         "measure_luminance",
         "alarm_motion"
       ],
+			"capabilitiesOptions": {
+				"onoff": {
+					"setOnDim": false
+				},
+				"dim": {
+					"opts": {
+						"duration": true
+					}
+				}
+			},
 			"images": {
 				"large": "/drivers/L_810_LED_iHF/assets/images/large.png",
 				"small": "/drivers/L_810_LED_iHF/assets/images/small.png"
+			},
+			"mobile": {
+				"components": [
+					{
+						"id": "icon",
+						"capabilities": [
+              "onoff"
+            ]
+          },
+					{
+						"id": "sensor",
+						"capabilities": [
+              "measure_luminance",
+              "alarm_motion"
+            ]
+          },
+					{
+						"id": "slider",
+						"capabilities": [
+              "dim"
+            ]
+          }
+        ]
 			},
 			"zwave": {
 				"manufacturerId": [
@@ -710,7 +902,7 @@
     },
 		{
 			"id": "RS_LED_D2",
-			"class": "sensor",
+			"class": "light",
 			"name": {
 				"en": "RS LED D2 Z-Wave"
 			},
@@ -722,6 +914,29 @@
 			"images": {
 				"large": "/drivers/RS_LED_D2/assets/images/large.png",
 				"small": "/drivers/RS_LED_D2/assets/images/small.png"
+			},
+			"mobile": {
+				"components": [
+					{
+						"id": "icon",
+						"capabilities": [
+              "onoff"
+            ]
+          },
+					{
+						"id": "sensor",
+						"capabilities": [
+              "measure_luminance",
+              "alarm_motion"
+            ]
+          },
+					{
+						"id": "toggle",
+						"capabilities": [
+              "onoff"
+            ]
+          }
+        ]
 			},
 			"zwave": {
 				"manufacturerId": [
@@ -1050,7 +1265,7 @@
     },
 		{
 			"id": "XLED_home_2",
-			"class": "sensor",
+			"class": "light",
 			"name": {
 				"en": "XLED home 2 Z-Wave"
 			},
@@ -1062,6 +1277,29 @@
 			"images": {
 				"large": "/drivers/XLED_home_2/assets/images/large.png",
 				"small": "/drivers/XLED_home_2/assets/images/small.png"
+			},
+			"mobile": {
+				"components": [
+					{
+						"id": "icon",
+						"capabilities": [
+              "onoff"
+            ]
+          },
+					{
+						"id": "sensor",
+						"capabilities": [
+              "measure_luminance",
+              "alarm_motion"
+            ]
+          },
+					{
+						"id": "toggle",
+						"capabilities": [
+              "onoff"
+            ]
+          }
+        ]
 			},
 			"zwave": {
 				"manufacturerId": [
@@ -1179,7 +1417,7 @@
 						"en": "Brightness measuring interval [minutes]"
 					},
 					"hint": {
-						"en": "Interval for ambient light measuring when lamp is on ( lamp switches\r\noff shortly and measures ). 0=function is off"
+						"en": "Interval for ambient light measuring when lamp is on (lamp switches off shortly and measures). Default: 0 = function is off, Range: 0, 5 - 120 [minutes]"
 					},
 					"zwave": {
 						"index": 6,

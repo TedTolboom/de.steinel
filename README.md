@@ -11,7 +11,7 @@ Please file Pull Requests on the *development* branch of this repository and wit
 
 ## Supported devices (and capabilities)
 * IS 140-2 Z-wave motion detector (onoff, measure_luminance, alarm_motion)   
-* L 180 LED iHF Z-wave Outdoor light (onoff, dim, measure_luminance, alarm_motion)   
+* L 180 LED iHF Z-wave Outdoor light (onoff, *dim*, measure_luminance, alarm_motion)   
 * XLED home 2 Z-wave Floodlight (onoff, measure_luminance, alarm_motion)   
 * RS LED D2 Z-wave Indoor light (onoff, measure_luminance, alarm_motion)   
 
@@ -22,6 +22,11 @@ Please file Pull Requests on the *development* branch of this repository and wit
  Any requests please post them in the [Steinel app topic on the Athom Forum](https://forum.athom.com/discussion/3834/) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)   
 
 ## Change Log:
+### v 0.1.0
+* Update devices to light class (re-inclusion required)    
+* Add sensor capability (custom) flow cards for motion alarm and measure_luminance    
+* Update Homey meshdriver to 1.2.10      
+
 ### v 0.0.4
 * Administrative update; add link to community forum topic    
 
