@@ -1,6 +1,6 @@
 {
 	"id": "RS_LED_D2",
-	"class": "sensor",
+	"class": "light",
 	"name": {
 		"en": "RS LED D2 Z-Wave"
 	},

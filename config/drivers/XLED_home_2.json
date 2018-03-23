@@ -1,6 +1,6 @@
 {
 	"id": "XLED_home_2",
-	"class": "sensor",
+	"class": "light",
 	"name": {
 		"en": "XLED home 2 Z-Wave"
 	},

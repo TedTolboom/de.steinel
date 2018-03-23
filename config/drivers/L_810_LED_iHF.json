@@ -1,17 +1,49 @@
 {
 	"id": "L_810_LED_iHF",
-	"class": "sensor",
+	"class": "light",
 	"name": {
 		"en": "L 810 LED iHF Z-Wave"
 	},
 	"capabilities": [
 		"onoff",
+		"dim",
 		"measure_luminance",
 		"alarm_motion"
 	],
+	"capabilitiesOptions": {
+		"onoff": {
+			"setOnDim": false
+		},
+		"dim": {
+			"opts": {
+				"duration": true
+			}
+		}
+	},
 	"images": {
 		"large": "/drivers/L_810_LED_iHF/assets/images/large.png",
 		"small": "/drivers/L_810_LED_iHF/assets/images/small.png"
+	},
+	"mobile": {
+		"components": [
+			{
+				"id": "icon",
+				"capabilities": ["onoff"]
+			},
+			{
+				"id": "sensor",
+				"capabilities": [
+					"measure_luminance",
+					"alarm_motion"
+				]
+			},
+			{
+				"id": "slider",
+				"capabilities": [
+					"dim"
+				]
+			}
+		]
 	},
 	"zwave": {
 		"manufacturerId": [

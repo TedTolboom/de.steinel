@@ -1,6 +1,6 @@
 {
 	"id": "IS_140_2",
-	"class": "sensor",
+	"class": "light",
 	"name": {
 		"en": "IS 140-2 Z-Wave"
 	},
