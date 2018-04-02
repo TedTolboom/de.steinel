@@ -16,9 +16,19 @@ Please file Pull Requests on the *development* branch of this repository and wit
 * RS LED D2 Z-wave Indoor light (onoff, measure_luminance, alarm_motion)   
 
 ## Supported Languages:
-* English
+* English   
+* Dutch
 
- ## Feedback:
+
+## Acknowledgements:
+This app and driver development has been supported by:   
+
+* Robbshop by providing the devices for debugging:   
+<a href="https://www.robbshop.nl/heat-it-wandthermostaat-zwaveplus-zwart">
+  <img src="https://www.robbshop.nl/skin/frontend/robbshop/default/images/logo.svg" width="25%">
+
+ ## Feedback:   
+
  Any requests please post them in the [Steinel app topic on the Athom Forum](https://forum.athom.com/discussion/3834/) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)   
 
 ## Change Log:
