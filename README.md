@@ -32,6 +32,9 @@ This app and driver development has been supported by:
  Any requests please post them in the [Steinel app topic on the Athom Forum](https://forum.athom.com/discussion/3834/) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)   
 
 ## Change Log:
+### v 1.0.0   
+* App store release   
+
 ### v 0.1.0
 * Update devices to light class (re-inclusion required)    
 * Add sensor capability (custom) flow cards for motion alarm and measure_luminance    
