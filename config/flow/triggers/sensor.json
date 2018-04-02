@@ -1,0 +1,54 @@
+[{
+		"id": "sensor_alarm_motion_on",
+		"title": {
+			"en": "The motion alarm turned on",
+			"nl": "De bewegingsmelder gaat aan"
+		},
+		"args": [
+			{
+				"type": "device",
+				"name": "device",
+				"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+		}
+	]
+},
+	{
+		"id": "sensor_alarm_motion_off",
+		"title": {
+			"en": "The motion alarm turned off",
+			"nl": "De bewegingsmelder gaat uit"
+		},
+		"args": [
+			{
+				"type": "device",
+				"name": "device",
+				"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+		}
+	]
+},
+	{
+		"id": "sensor_measure_luminance",
+		"title": {
+			"en": "The luminance changed",
+			"nl": "De helderheid is veranderd"
+		},
+		"args": [
+			{
+				"type": "device",
+				"name": "device",
+				"filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+	}
+],
+		"tokens": [
+			{
+				"name": "luminance",
+				"type": "number",
+				"title": {
+					"en": "luminance",
+					"nl": "helderheid"
+				},
+				"example": 100
+			}
+		]
+	}
+]
