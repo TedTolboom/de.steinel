@@ -29,9 +29,14 @@ This app and driver development has been supported by:
 
  ## Feedback:   
 
- Any requests please post them in the [Steinel app topic on the Athom Forum](https://forum.athom.com/discussion/3834/) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)   
+ Any requests please post them in the [Steinel app topic on the Athom Community Forum](https://community.athom.com/t/167) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)   
 
 ## Change Log:
+### v 1.0.1   
+* Add link to [Steinel app topic](https://community.athom.com/t/167) on community.athom.com   
+**update:**   
+* Update Homey meshdriver to 1.2.25    
+
 ### v 1.0.0   
 * App store release   
 

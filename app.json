@@ -8,9 +8,10 @@
     "en": "Adds support for Steinel SmartHome products"
   },
   "category": "lights",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=1.5.0",
   "athomForumDiscussionId": 3834,
+  "homeyCommunityTopicId": 167,
   "author": {
     "name": "Ted Tolboom",
     "email": "dTNL.Homey@gmail.com"
