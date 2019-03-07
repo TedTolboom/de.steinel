@@ -258,7 +258,7 @@
           "hint": {
             "en": "Duration of light switched on after motion detection.\nDefault: 180 s\nRange: 5 - 900",
             "nl": "Tijdsduur waarin het licht ingeschakeld is na bewegingsdetectie.\nStandaard: 180 s\nBereik: 5 - 900",
-            "de": "Einschaltdauer des Lichts nach der Bewegungserkennung.\nStandard: 180 s\Bereich: 5 - 900"
+            "de": "Einschaltdauer des Lichts nach der Bewegungserkennung.\nStandard: 180 s\nBereich: 5 - 900"
           },
           "zwave": {
             "index": 1,
@@ -304,7 +304,7 @@
           "hint": {
             "en": "Motion Sensor (PIR) Sensitivity [%] value can be controlled via potentiometer – potentiometer value is used as the default value and any potentiometer movement rewrites the current setting.\nDefault: 100\nRange: 2, 100",
             "nl": "Bewegingssensor (PIR) gevoeligheid [%] instelbaar via potentiometer – potentiometer value wordt gebruikt als standaard waarde en elke potentiometer aanpassing overschrijft de huidige instelling.\nStandaard: 100 \nBereik: 2 - 100",
-            "de": "Die Empfindlichkeit des Bewegungsmelders (PIR) [%] kann über ein Potentiometer gesteuert werden - der Potentiometerwert wird als Standardwert verwendet und jede Potentiometerbewegung überschreibt die aktuelle Einstellung. \Standard: 100\nBereich: 2, 100"
+            "de": "Die Empfindlichkeit des Bewegungsmelders (PIR) [%] kann über ein Potentiometer gesteuert werden - der Potentiometerwert wird als Standardwert verwendet und jede Potentiometerbewegung überschreibt die aktuelle Einstellung. \nStandard: 100\nBereich: 2, 100"
           },
           "zwave": {
             "index": 5,
@@ -692,7 +692,7 @@
           "hint": {
             "en": "Duration of light switched on after motion detection.\nDefault: 180 s\nRange: 5 - 900",
             "nl": "Tijdsduur waarin het licht ingeschakeld is na bewegingsdetectie.\nStandaard: 180 s\nBereik: 5 - 900",
-            "de": "Einschaltdauer des Lichts nach der Bewegungserkennung.\nStandard: 180 s\Bereich: 5 - 900"
+            "de": "Einschaltdauer des Lichts nach der Bewegungserkennung.\nStandard: 180 s\nBereich: 5 - 900"
           },
           "zwave": {
             "index": 1,
@@ -733,12 +733,12 @@
           "label": {
             "en": "Night dim mode and time [min]",
             "nl": "Nacht dim modus en tijdsduur [min]",
-            "de": "Nachtdimmmodus und Zeit [min]",
+            "de": "Nachtdimmmodus und Zeit [min]"
           },
           "hint": {
             "en": "0 – off (dim = basic light completely disabled)\r\n1-60 – time [minutes] (enabled in night mode, starts after lamp is switched off after motion detection)\r\n-1 – whole night (dim through the whole night when lamp is off)Dim mode is also disabled when local control is disabled (as well as in Slave mode)",
             "nl": "Nacht dim modus en tijdsduur [min]\r\nDim modus is ook uitgeschakeld wanneer locale controle uitgeschakeld is (ook in Slave mode)\n0 = uit (dim = basis light compleet uitgeschakeld )\n-1 = gehele nacht (dim de gehele nacht wanneer de lamp uit is)",
-            "en": "0 - aus (dimmen = Grundlicht komplett deaktiviert) \r\n1-60 - Zeit[Minuten] (aktiviert im Nachtmodus, startet nach dem Ausschalten der Lampe nach der Bewegungserkennung) \r\n-1 - ganze Nacht (dimmen durch die ganze Nacht, wenn die Lampe ausgeschaltet ist) Dimmmodus ist auch deaktiviert, wenn die lokale Steuerung deaktiviert ist (sowie im Slave-Modus)"          },
+            "de": "0 - aus (dimmen = Grundlicht komplett deaktiviert) \r\n1-60 - Zeit[Minuten] (aktiviert im Nachtmodus, startet nach dem Ausschalten der Lampe nach der Bewegungserkennung) \r\n-1 - ganze Nacht (dimmen durch die ganze Nacht, wenn die Lampe ausgeschaltet ist) Dimmmodus ist auch deaktiviert, wenn die lokale Steuerung deaktiviert ist (sowie im Slave-Modus)"          },
           "zwave": {
             "index": 3,
             "size": 1
@@ -1136,7 +1136,7 @@
           "hint": {
             "en": "Duration of light switched on after motion detection.\nDefault: 180 s\nRange: 5 - 900",
             "nl": "Tijdsduur waarin het licht ingeschakeld is na bewegingsdetectie.\nStandaard: 180 s\nBereik: 5 - 900",
-            "de": "Einschaltdauer des Lichts nach der Bewegungserkennung.\nStandard: 180 s\Bereich: 5 - 900"
+            "de": "Einschaltdauer des Lichts nach der Bewegungserkennung.\nStandard: 180 s\nBereich: 5 - 900"
           },
           "zwave": {
             "index": 1,
@@ -1182,7 +1182,7 @@
           "hint": {
             "en": "Motion Sensor (PIR) Sensitivity [%] value can be controlled via potentiometer – potentiometer value is used as the default value and any potentiometer movement rewrites the current setting.\nDefault: 100\nRange: 2, 100",
             "nl": "Bewegingssensor (PIR) gevoeligheid [%] instelbaar via potentiometer – potentiometer value wordt gebruikt als standaard waarde en elke potentiometer aanpassing overschrijft de huidige instelling.\nStandaard: 100 \nBereik: 2 - 100",
-            "de": "Die Empfindlichkeit des Bewegungsmelders (PIR) [%] kann über ein Potentiometer gesteuert werden - der Potentiometerwert wird als Standardwert verwendet und jede Potentiometerbewegung überschreibt die aktuelle Einstellung. \Standard: 100\nBereich: 2, 100"
+            "de": "Die Empfindlichkeit des Bewegungsmelders (PIR) [%] kann über ein Potentiometer gesteuert werden - der Potentiometerwert wird als Standardwert verwendet und jede Potentiometerbewegung überschreibt die aktuelle Einstellung. \nStandard: 100\nBereich: 2, 100"
           },
           "zwave": {
             "index": 5,
@@ -1559,7 +1559,7 @@
           "hint": {
             "en": "Duration of light switched on after motion detection.\nDefault: 180 s\nRange: 5 - 900",
             "nl": "Tijdsduur waarin het licht ingeschakeld is na bewegingsdetectie.\nStandaard: 180 s\nBereik: 5 - 900",
-            "de": "Einschaltdauer des Lichts nach der Bewegungserkennung.\nStandard: 180 s\Bereich: 5 - 900"
+            "de": "Einschaltdauer des Lichts nach der Bewegungserkennung.\nStandard: 180 s\nBereich: 5 - 900"
           },
           "zwave": {
             "index": 1,
@@ -1605,7 +1605,7 @@
           "hint": {
             "en": "Motion Sensor (PIR) Sensitivity [%] value can be controlled via potentiometer – potentiometer value is used as the default value and any potentiometer movement rewrites the current setting.\nDefault: 100\nRange: 2, 100",
             "nl": "Bewegingssensor (PIR) gevoeligheid [%] instelbaar via potentiometer – potentiometer value wordt gebruikt als standaard waarde en elke potentiometer aanpassing overschrijft de huidige instelling.\nStandaard: 100 \nBereik: 2 - 100",
-            "de": "Die Empfindlichkeit des Bewegungsmelders (PIR) [%] kann über ein Potentiometer gesteuert werden - der Potentiometerwert wird als Standardwert verwendet und jede Potentiometerbewegung überschreibt die aktuelle Einstellung. \Standard: 100\nBereich: 2, 100"
+            "de": "Die Empfindlichkeit des Bewegungsmelders (PIR) [%] kann über ein Potentiometer gesteuert werden - der Potentiometerwert wird als Standardwert verwendet und jede Potentiometerbewegung überschreibt die aktuelle Einstellung. \nStandard: 100\nBereich: 2, 100"
           },
           "zwave": {
             "index": 5,
