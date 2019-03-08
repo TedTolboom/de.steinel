@@ -17,7 +17,9 @@
 		"components": [
 			{
 				"id": "icon",
-				"capabilities": ["onoff"]
+				"capabilities": [
+					"onoff"
+				]
 			},
 			{
 				"id": "sensor",
@@ -65,23 +67,27 @@
 			},
 			"2": {
 				"hint": {
-					"en": "Group 2 is used for directly controlling Z-Wave devices via BASIC SET commands through the evaluation of movement and light as with internal use (so that all of these devices work together). This is intended for use especially with third-party devices that do not implement reactions for mo- tion events."
+					"en": "Group 2 is used for directly controlling Z-Wave devices via BASIC SET commands through the evaluation of movement and light as with internal use (so that all of these devices work together). This is intended for use especially with third-party devices that do not implement reactions for mo- tion events.",
+					"de": "Gruppe 2 dient zur direkten Steuerung von Z-Wave-Geräten über BASIC SET-Befehle durch die Auswertung von Bewegung und Licht wie beim internen Gebrauch (so dass alle diese Geräte zusammenwirken). Dies ist insbesondere für den Einsatz mit Geräten von Drittanbietern vorgesehen, die keine Implementierung für Bewegungsmelder haben."
 				}
 			},
 			"3": {
 				"hint": {
-					"en": "Group 3 sends Notification reports (MOTION_BEGIN and MOTION_END frames."
+					"en": "Group 3 sends Notification reports (MOTION_BEGIN and MOTION_END frames)",
+					"de": "Gruppe 3 sendet Notification reports (MOTION_BEGIN and MOTION_END frames)"
 				}
 			},
 			"4": {
 				"hint": {
-					"en": "Ambient Light via group 4 is intended to substitute locally measured LUX values in target devices – so that the network can have one source of ambient light value. The frame rate is a value being sent a maximum of once per 2.5 minutes, and a minimum of once per 15 minutes."
+					"en": "Ambient Light via group 4 is intended to substitute locally measured LUX values in target devices – so that the network can have one source of ambient light value. The frame rate is a value being sent a maximum of once per 2.5 minutes, and a minimum of once per 15 minutes.",
+					"de": "Ambient Light über Gruppe 4 soll lokal gemessene LUX-Werte in den Zielgeräten ersetzen - so dass das Netzwerk eine Quelle für den Umgebungslichtwert haben kann. Die frame rate ist ein Wert, der maximal einmal pro 2,5 Minuten und mindestens einmal pro 15 Minuten gesendet wird."
 				}
 			}
 		},
 		"unlearnmode": {
 			"instruction": {
-				"en": "Exclusion = Remove\r\n\r\nTo start the motion detector's exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\r\nRemoving IS 140-2 from the Smart Friends system:\r\n1) In the rooms view, activate the edit mode.\r\n2) Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3) To put the device into exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The red status LED (F) lights up to show that this mode is selected.\r\n4) The app displays a confirmation message once exclusion has been successfully completed."
+				"en": "Exclusion = Remove\r\n\r\nTo start the motion detector's exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\r\nRemoving IS 140-2 from the Smart Friends system:\r\n1) In the rooms view, activate the edit mode.\r\n2) Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3) To put the device into exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The red status LED (F) lights up to show that this mode is selected.\r\n4) The app displays a confirmation message once exclusion has been successfully completed.",
+				"de": "Exclusion = Entfernen\r\n\r\n Um den Exklusionsmodus des Bewegungsmelders zu starten, drehe den Drehregler (E) auf \"Set\" und zurück zu  \"0\" innerhalb 5 Sekunden."
 			}
 		}
 	},
@@ -91,11 +97,13 @@
 			"value": 180,
 			"label": {
 				"en": "Motion detection ON (s)",
-				"nl": "Bewegingsdetectie AAN tijd (s)"
+				"nl": "Bewegingsdetectie AAN tijd (s)",
+				"de": "Bewegungserkennung EIN (s)"
 			},
 			"hint": {
 				"en": "Duration of light switched on after motion detection.\nDefault: 180 s\nRange: 5 - 900",
-				"nl": "Tijdsduur waarin het licht ingeschakeld is na bewegingsdetectie.\nStandaard: 180 s\nBereik: 5 - 900"
+				"nl": "Tijdsduur waarin het licht ingeschakeld is na bewegingsdetectie.\nStandaard: 180 s\nBereik: 5 - 900",
+				"de": "Einschaltdauer des Lichts nach der Bewegungserkennung.\nStandard: 180 s\nBereich: 5 - 900"
 			},
 			"zwave": {
 				"index": 1,
@@ -112,11 +120,13 @@
 			"value": 2000,
 			"label": {
 				"en": "Illumination switch ON level (lux)",
-				"nl": "Lichtsterkte inschakel niveau (lux)"
+				"nl": "Lichtsterkte inschakel niveau (lux)",
+				"de": "Helligkeitseinstellung (lux)"
 			},
 			"hint": {
 				"en": "Light threshold (lux) value can be controlled via potentiometer – potentiometer value is used as the default value and any potentiometer movement rewrites the current setting.\nDefault: 2\nRange: 0, 2 - 2000\n0 = run Learn ambient light sequence (the level is set automatically)\n2000 - is used as daylight (always night mode)",
-				"nl": "lichtsterkte niveau (lux) instelbaar via potentiometer – potentiometer value wordt gebruikt als standaard waarde en elke potentiometer aanpassing overschrijft de huidige instelling.\nStandaard: 2\nBereik: 0, 2 - 2000\n0 = run leer de ambient light sequence (het niveau wordt automatisch ingesteld)\n2000 - daglicht waarde (altijd nacht modus)"
+				"nl": "lichtsterkte niveau (lux) instelbaar via potentiometer – potentiometer value wordt gebruikt als standaard waarde en elke potentiometer aanpassing overschrijft de huidige instelling.\nStandaard: 2\nBereik: 0, 2 - 2000\n0 = run leer de ambient light sequence (het niveau wordt automatisch ingesteld)\n2000 - daglicht waarde (altijd nacht modus)",
+				"de": "Der Lichtschwellenwert (Lux) kann über das Potentiometer gesteuert werden - der Potentiometerwert wird als Standardwert verwendet und jede Potentiometerbewegung überschreibt die aktuelle Einstellung.\nStandard: 2\nVereich: 0, 2 - 2000\n0 = Lernmodus (der Pegel wird automatisch eingestellt) \n2000 - wird als Tageslicht verwendet (immer Nachtmodus)"
 			},
 			"zwave": {
 				"index": 2,
@@ -133,11 +143,13 @@
 			"value": 100,
 			"label": {
 				"en": "Motion sensor sensitivity (%)",
-				"nl": "Bewegingssensor gevoeligheid (%)"
+				"nl": "Bewegingssensor gevoeligheid (%)",
+				"de": "Bewegungsmelder Empflichkeit (%)"
 			},
 			"hint": {
 				"en": "Motion Sensor (PIR) Sensitivity [%] value can be controlled via potentiometer – potentiometer value is used as the default value and any potentiometer movement rewrites the current setting.\nDefault: 100\nRange: 2, 100",
-				"nl": "Bewegingssensor (PIR) gevoeligheid [%] instelbaar via potentiometer – potentiometer value wordt gebruikt als standaard waarde en elke potentiometer aanpassing overschrijft de huidige instelling.\nStandaard: 100 \nBereik: 2 - 100"
+				"nl": "Bewegingssensor (PIR) gevoeligheid [%] instelbaar via potentiometer – potentiometer value wordt gebruikt als standaard waarde en elke potentiometer aanpassing overschrijft de huidige instelling.\nStandaard: 100 \nBereik: 2 - 100",
+				"de": "Die Empfindlichkeit des Bewegungsmelders (PIR) [%] kann über ein Potentiometer gesteuert werden - der Potentiometerwert wird als Standardwert verwendet und jede Potentiometerbewegung überschreibt die aktuelle Einstellung. \nStandard: 100\nBereich: 2, 100"
 			},
 			"zwave": {
 				"index": 5,
@@ -154,11 +166,13 @@
 			"value": 0,
 			"label": {
 				"en": "Illumination measuring interval when switched ON (min)",
-				"nl": "Lichtsterkte meet interval wanneer inschakeld (min)"
+				"nl": "Lichtsterkte meet interval wanneer inschakeld (min)",
+				"de": "Helligkeits-Messintervall wenn Licht eingeschaltet (min)"
 			},
 			"hint": {
 				"en": "Interval for ambient light measuring when lamp is on (lamp switches off shortly and measures). \nDefault: 0, \nRange: 0, 5 - 120 [min]\n0 = function is off",
-				"nl": "Interval lichtsterkte meting wanneer de lamp aan is (lamp schakeld kort uit tijdens meting). \nStandaard: 0, \nBereik: 0, 5 - 120 [min]\n0 = functie is uitgeschakeld"
+				"nl": "Interval lichtsterkte meting wanneer de lamp aan is (lamp schakeld kort uit tijdens meting). \nStandaard: 0, \nBereik: 0, 5 - 120 [min]\n0 = functie is uitgeschakeld",
+				"de": "Intervall für die Messung des Umgebungslichts bei eingeschalteter Lampe (Lampe schaltet kurz aus und misst). \nStandard: 0, \nBereich: 0, 5 - 120 [min]\n0 = Funktion ist ausgeschaltet."
 			},
 			"zwave": {
 				"index": 6,
@@ -175,11 +189,13 @@
 			"value": true,
 			"label": {
 				"en": "Use External Illumination Value",
-				"nl": "Gebruik externe lichtsterkte waarde"
+				"nl": "Gebruik externe lichtsterkte waarde",
+				"de": "Externen Helligkeitswert verwenden"
 			},
 			"hint": {
 				"en": "When this mode is ON – device overrides its own light sensor values and uses Light report values from any Z-Wave light sensor instead. This has to be configured appropriately to send light automatically.\nIf the last remote light level value is older than 30 minutes, the internal light value is used again until the next external value is received.",
-				"nl": "Wanneer deze modus ingeschakeld is – apparaat overschrijft de eigen lichtsterkte metingen en gebruikt de metingen van een hieraan gekoppelde Z-wave licht sensor. Dit moet op de correcte manier ingesteld worden.\nWanneer de laatste lichtsterkte waarde ouder is dan 30 minuten wordt de interne lichtsterkte waarde opnieuw gebruikt totdat een nieuwe externe waarde ontvangen wordt."
+				"nl": "Wanneer deze modus ingeschakeld is – apparaat overschrijft de eigen lichtsterkte metingen en gebruikt de metingen van een hieraan gekoppelde Z-wave licht sensor. Dit moet op de correcte manier ingesteld worden.\nWanneer de laatste lichtsterkte waarde ouder is dan 30 minuten wordt de interne lichtsterkte waarde opnieuw gebruikt totdat een nieuwe externe waarde ontvangen wordt.",
+				"de": "Wenn dieser Modus eingeschaltet ist dann überschreibt das Gerät seine eigenen Helligkeitswert und verwendet stattdessen Helligkeitswerte von jedem Z-Wave-Helligkeitssensor. Wenn der letzte entfernte Helligkeitswert älter als 30 Minuten ist, wird der interne Lichtwert wieder verwendet, bis der nächste externe Wert empfangen wird."
 			},
 			"zwave": {
 				"index": 8,
@@ -191,11 +207,12 @@
 			"id": "slave_mode",
 			"value": "2",
 			"label": {
-				"en": "Disable local control"
+				"en": "Disable local control",
+				"de": "Deaktiviere lokale Steuerung"
 			},
 			"hint": {
-				"en": "Be careful with this option.\nPlease read manual for the right settings",
-				"en": "Pas deze optie met beleid toe\nLees voor gebruik van deze optie de handleiding"
+				"en": "Pas deze optie met beleid toe\nLees voor gebruik van deze optie de handleiding",
+				"de": "Damit ist es möglich den Bewegungsmelder zu deaktivieren."
 			},
 			"zwave": {
 				"index": 9,
@@ -205,31 +222,36 @@
 				{
 					"id": "0",
 					"label": {
-						"en": "Normal mode"
+						"en": "Normal mode",
+						"de": "Normal Modus"
 					}
 				},
 				{
 					"id": "1",
 					"label": {
-						"en": "Slave mode without gateway checking"
+						"en": "Slave mode without gateway checking",
+						"de": "Slave Modus ohne Gateway-Überprüfung"
 					}
 				},
 				{
 					"id": "2",
 					"label": {
-						"en": "Normal mode with lifeline error signalisation"
+						"en": "Normal mode with lifeline error signalisation",
+						"de": "Normalbetrieb mit Lifeline-Fehlersignalisierung"
 					}
 				},
 				{
 					"id": "3",
 					"label": {
-						"en": "Slave mode with gateway checking"
+						"en": "Slave mode with gateway checking",
+						"de": "Slave Modus mit Gateway-Überprüfung"
 					}
 				},
 				{
 					"id": "4",
 					"label": {
-						"en": "Stupid mode - lamp permanently on"
+						"en": "Stupid mode - lamp permanently on",
+						"de": "Dumm Modus - Lampe dauerhaft eingeschaltet"
 					}
 				}
 			],
@@ -240,11 +262,13 @@
 			"value": 10,
 			"label": {
 				"en": "Response after BASIC OFF",
-				"nl": "Reactie na BASIC OFF"
+				"nl": "Reactie na BASIC OFF",
+				"de": "Reaktion auf BASIC OFF"
 			},
 			"hint": {
 				"en": "\n0 = Lamp is switched off and remains off until new motion event.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255: Lamp is switched off for the time set in 'Motion detection ON'",
-				"nl": "\n0 = Lamp is uitgeschakeld en blijft uit tot nieuwe bewegingsdetectie.\ntimeout: 1 second (1) to 100 seconds (100) in 1-seconde resolutie\ntimeout: 1 minute (101) to 100 minutes (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 hours (209) in 1-uur resolutie\nLamp is uitgeschakeld voor de tijdsduur ingesteld in 'Bewegingsdetectie AAN tijd'"
+				"nl": "\n0 = Lamp is uitgeschakeld en blijft uit tot nieuwe bewegingsdetectie.\ntimeout: 1 second (1) to 100 seconds (100) in 1-seconde resolutie\ntimeout: 1 minute (101) to 100 minutes (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 hours (209) in 1-uur resolutie\nLamp is uitgeschakeld voor de tijdsduur ingesteld in 'Bewegingsdetectie AAN tijd'",
+				"de": "\n0 = Lampe ist ausgeschaltet und bleibt bis zum neuen Bewegungsereignis ausgeschaltet. \ntimeout: 1 Sekunde (1) bis 100 Sekunden (100) in 1-Sekunden-Schritten Timeout: 1 Minute (101) bis 100 Minuten (200) 1-Minuten-Schritten\nTimeout: 1 Stunde (201) bis 9 Stunden (209) in 1-Stunden-Scrhitte \n255: Die Lampe wird für die unter'Bewegungserkennung EIN' eingestellte Zeit ausgeschaltet."
 			},
 			"zwave": {
 				"index": 10,
@@ -261,11 +285,13 @@
 			"value": 255,
 			"label": {
 				"en": "Response after BASIC ON (and similar commands).",
-				"nl": "Reactie na BASIC ON (en vergelijkbare commandos)."
+				"nl": "Reactie na BASIC ON (en vergelijkbare commandos).",
+				"de": "Reaktion auf BASIC ON (und ähnlichen Befehlen)."
 			},
 			"hint": {
 				"en": "\n0 = Lamp is switched on and remains on until new motion event.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255: Lamp is switched on for TIME",
-				"nl": "\n0 = Lamp is ingeschakeld en blijft uit tot nieuwe bewegingsdetectie.\ntimeout: 1 second (1) to 100 seconds (100) in 1-seconde resolutie\ntimeout: 1 minute (101) to 100 minutes (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 hours (209) in 1-uur resolutie\n255: Lamp is uitgeschakeld voor de tijdsduur ingesteld in 'Bewegingsdetectie AAN tijd'"
+				"nl": "\n0 = Lamp is ingeschakeld en blijft uit tot nieuwe bewegingsdetectie.\ntimeout: 1 second (1) to 100 seconds (100) in 1-seconde resolutie\ntimeout: 1 minute (101) to 100 minutes (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 hours (209) in 1-uur resolutie\n255: Lamp is uitgeschakeld voor de tijdsduur ingesteld in 'Bewegingsdetectie AAN tijd'",
+				"de": "\n0 = Lampe ist eingeschaltet und bleibt bis zum neuen Bewegungsereignis eingeschaltet. \ntimeout: 1 Sekunde (1) bis 100 Sekunden (100) in 1-Sekunden-Schritten Timeout: 1 Minute (101) bis 100 Minuten (200) 1-Minuten-Schritten\nTimeout: 1 Stunde (201) bis 9 Stunden (209) in 1-Stunden-Scrhitte \n255: Die Lampe wird für die unter'Bewegungserkennung EIN' eingestellte Zeit eingeschaltet."
 			},
 			"zwave": {
 				"index": 11,
@@ -276,17 +302,19 @@
 				"max": 255
 			},
 			"type": "number"
-			},
+		},
 		{
 			"id": "on_time_over",
 			"value": 204,
 			"label": {
 				"en": "On behavior time over (timeout)",
-				"nl": "Aan reactie over tijd (timeout)"
+				"nl": "Aan reactie over tijd (timeout)",
+				"de": "Ein Verhalten nach Ablauf der Zeit"
 			},
 			"hint": {
 				"en": "Time limit to stop waiting for motion after timeout of 'Response after BASIC ON' or OFF_ON_BEHAVIOUR\n0 = Stop waiting just after timeout.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255, Never stop waiting before motion.",
-				"nl": "Tijd limiet om te stoppen met wachten voor een bewegingsdetectie na timeout 'Reactie na BASIC ON' of OFF_ON_BEHAVIOUR\n0 = Stop met wachten na timeout.\ntimeout: 1 second (1) to 100 seconds (100) in 1-seconde resolutie\ntimeout: 1 minute (101) to 100 minutes (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 hours (209) in 1-uur resolutie\n255, Stop niet met wachten voor bewegingsdetectie."
+				"nl": "Tijd limiet om te stoppen met wachten voor een bewegingsdetectie na timeout 'Reactie na BASIC ON' of OFF_ON_BEHAVIOUR\n0 = Stop met wachten na timeout.\ntimeout: 1 second (1) to 100 seconds (100) in 1-seconde resolutie\ntimeout: 1 minute (101) to 100 minutes (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 hours (209) in 1-uur resolutie\n255, Stop niet met wachten voor bewegingsdetectie.",
+				"de": "Zeitlimit für Warten auf Bewegung nach dem Timeout von 'Response after BASIC ON' oder OFF_ON_BEHAVIOUR\n0 Direkt nach dem Timeout\nTimeout: 1 Sekunde (1) bis 100 Sekunden (100) in 1-Sekunden-Schritten Timeout: 1 Minute (101) bis 100 Minuten (200) 1-Minute-Schritten\nTimeout: 1 Stunde (201) bis 9 Stunden (209) in 1-Stunden-Schritten\n255, Kein Timeout für das Warten auf Bewegung."
 			},
 			"zwave": {
 				"index": 12,
@@ -303,11 +331,13 @@
 			"value": 204,
 			"label": {
 				"en": "Response after fast ON-OFF sequence",
-				"nl": "Reactie na snelle ON-OFF schakeling"
+				"nl": "Reactie na snelle ON-OFF schakeling",
+				"de": "Reaktion nach schneller EIN-AUS-Sequenz"
 			},
 			"hint": {
 				"en": "\n0 = Lamp is switched on.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255, device ignores OFF - ON sequence and uses OFF behaviour.",
-				"nl": "\n0 = Lamp is ingeschakeld.\ntimeout: 1 seconde (1) to 100 seconden (100) in 1-seconde resolutie\ntimeout: 1 minuut (101) to 100 minuten (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 uur (209) in 1-uur resolutie\n255, device negeert UIT-AAN sequence en gebruikt UIT gedrag."
+				"nl": "\n0 = Lamp is ingeschakeld.\ntimeout: 1 seconde (1) to 100 seconden (100) in 1-seconde resolutie\ntimeout: 1 minuut (101) to 100 minuten (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 uur (209) in 1-uur resolutie\n255, device negeert UIT-AAN sequence en gebruikt UIT gedrag.",
+				"de": "\n0 = Lampe ist eingeschaltet. \nTimeout: 1 Sekunde (1) bis 100 Sekunden (100) in 1-Sekunden-Schritten Zeitüberschreitung: 1 Minute (101) bis 100 Minuten (200) 1-Minuten-Schritten\nTimeout: 1 Stunde (201) bis 9 Stunden (209) in 1-Stunden-Schritten\n255, das Gerät ignoriert die Sequenz AUS - EIN und verwendet das Verhalten AUS."
 			},
 			"zwave": {
 				"index": 13,
@@ -324,11 +354,13 @@
 			"value": 204,
 			"label": {
 				"en": "Response after fast OFF-ON sequence",
-				"nl": "Reactie na snelle OFF-ON schakeling"
+				"nl": "Reactie na snelle OFF-ON schakeling",
+				"de": "Reaktion nach schneller AUS-EIN-Sequenz"
 			},
 			"hint": {
 				"en": "\n0 = Lamp is switched off.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255, device ignores ON - OFF sequence and uses OFF behaviour.",
-				"nl": "\n0 = Lamp is uitgeschakeld.\ntimeout: 1 seconde (1) to 100 seconden (100) in 1-seconde resolutie\ntimeout: 1 minuut (101) to 100 minuten (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 uur (209) in 1-uur resolutie\n255, device negeert AAN - UIT sequence en gebruikt AAN gedrag."
+				"nl": "\n0 = Lamp is uitgeschakeld.\ntimeout: 1 seconde (1) to 100 seconden (100) in 1-seconde resolutie\ntimeout: 1 minuut (101) to 100 minuten (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 uur (209) in 1-uur resolutie\n255, device negeert AAN - UIT sequence en gebruikt AAN gedrag.",
+				"de": "\n0 = Lampe ist ausgeschaltet. \nTimeout. 1 Sekunde (1) bis 100 Sekunden (100) in 1-Sekunden-Schritten Zeitüberschreitung: 1 Minute (101) bis 100 Minuten (200) 1-Minuten-Schritten\nTimeout: 1 Stunde (201) bis 9 Stunden (209) in 1-Stunden-Schritten\n255, Gerät ignoriert EIN - AUS-Sequenz und verwendet AUS-Verhalten"
 			},
 			"zwave": {
 				"index": 14,
@@ -345,11 +377,13 @@
 			"value": 10,
 			"label": {
 				"en": "Maximum delay in switch sequence",
-				"nl": "Maximale vertraging in schakel serie"
+				"nl": "Maximale vertraging in schakel serie",
+				"de": "Maximale Verzögerung in der Schaltsequenz"
 			},
 			"hint": {
 				"en": "Time in [ 100 miliseconds ] of maximum delay between BASIC ON and BASIC OFF ( and vice versa ) to consider this as a sequence. It is typically 1 second, but can be exceptionally longer due to retransmissions and overload – in this case, a longer interval can be allowed ( up to 5 seconds ).",
-				"nl": "Tijd in [ 100 miliseconds ] of maximale vertraging tussen BASIC ON en BASIC OFF ( en vice versa ) om als een serie beschouwd te worden. Typisch 1 seconde, maar kan exceptioneel langer duren in verband met het opnieuw versturen – in dit geval kan een hogere interval ingesteld worden ( tot 5 seconds )."
+				"nl": "Tijd in [ 100 miliseconds ] of maximale vertraging tussen BASIC ON en BASIC OFF ( en vice versa ) om als een serie beschouwd te worden. Typisch 1 seconde, maar kan exceptioneel langer duren in verband met het opnieuw versturen – in dit geval kan een hogere interval ingesteld worden ( tot 5 seconds ).",
+				"de": "Zeit in [ 100 Milisekunden] der maximalen Verzögerung zwischen BASIC ON und BASIC OFF (und umgekehrt), um dies als Sequenz zu betrachten. Sie beträgt typischerweise 1 Sekunde, kann aber aufgrund von Wiederholungen und Überlastung außergewöhnlich länger sein - in diesem Fall kann ein längeres Intervall erlaubt sein (bis zu 5 Sekunden)"
 			},
 			"zwave": {
 				"index": 15,
@@ -366,11 +400,13 @@
 			"value": 0,
 			"label": {
 				"en": "Motion off timeout",
-				"nl": "Bewegingsdetectie uit timeout"
+				"nl": "Bewegingsdetectie uit timeout",
+				"de": "Bewegung timeout"
 			},
 			"hint": {
 				"en": "\n0 = BASIC SET to Motion endpoint ignored, Motion sensor still enabled.\ntimeout: 1 second (1) to 100 seconds (100) in 1-second resolution\ntimeout: 1 minute (101) to 100 minutes (200) 1-minute resolution\ntimeout: 1 hour (201) to 9 hours (209) in 1-hour resolution\n255, BASIC SET to Motion endpoint ignored, Motion sensor still disabled.",
-				"nl": "\n0 = BASEC SET naar apparaat wordt genegeert, Bewegingssensor is ingeschakeld.\ntimeout: 1 second (1) to 100 seconds (100) in 1-seconde resolutie\ntimeout: 1 minute (101) to 100 minutes (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 hours (209) in 1-uur resolutie\n255: BASIC SET naar apparaat wordt genegeert, Bewegingssensor uitgeschakeld"
+				"nl": "\n0 = BASEC SET naar apparaat wordt genegeert, Bewegingssensor is ingeschakeld.\ntimeout: 1 second (1) to 100 seconds (100) in 1-seconde resolutie\ntimeout: 1 minute (101) to 100 minutes (200) 1-minuut resolutie\ntimeout: 1 uur (201) to 9 hours (209) in 1-uur resolutie\n255: BASIC SET naar apparaat wordt genegeert, Bewegingssensor uitgeschakeld",
+				"de": "\n0 = BASIC SET to Motion Endpoint ignoriert, Bewegungssensor noch aktiviert. \nTimeout: 1 Sekunde (1) bis 100 Sekunden (100) in 1-Sekunden-Schritten Timeout: 1 Minute (101) bis 100 Minuten (200) 1-Minuten-Schritten\nTimeout: 1 Stunde (201) bis 9 Stunden (209) in 1-Stunden-Schritten\n255, BASIC SET to Motion Endpoint ignoriert, Bewegungssensor noch deaktiviert"
 			},
 			"zwave": {
 				"index": 16,
