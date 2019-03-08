@@ -8,13 +8,27 @@
     "en": "Adds support for Steinel SmartHome products"
   },
   "category": "lights",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": ">=1.5.0",
   "athomForumDiscussionId": 3834,
   "homeyCommunityTopicId": 167,
   "author": {
     "name": "Ted Tolboom",
     "email": "dTNL.Homey@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Martin Pussamsies",
+        "email": "martin@pussamsies.de"
+      }
+    ]
   },
   "contributing": {
     "donate": {
@@ -657,7 +671,6 @@
             "hint": {
               "en": "Group 2 is used for directly controlling Z-Wave devices via BASIC SET commands through the evaluation of movement and light as with internal use (so that all of these devices work together). This is intended for use especially with third-party devices that do not implement reactions for mo- tion events.",
               "de": "Gruppe 2 dient zur direkten Steuerung von Z-Wave-Geräten über BASIC SET-Befehle durch die Auswertung von Bewegung und Licht wie beim internen Gebrauch (so dass alle diese Geräte zusammenwirken). Dies ist insbesondere für den Einsatz mit Geräten von Drittanbietern vorgesehen, die keine Implementierung für Bewegungsmelder haben."
-
             }
           },
           "3": {
@@ -738,7 +751,8 @@
           "hint": {
             "en": "0 – off (dim = basic light completely disabled)\r\n1-60 – time [minutes] (enabled in night mode, starts after lamp is switched off after motion detection)\r\n-1 – whole night (dim through the whole night when lamp is off)Dim mode is also disabled when local control is disabled (as well as in Slave mode)",
             "nl": "Nacht dim modus en tijdsduur [min]\r\nDim modus is ook uitgeschakeld wanneer locale controle uitgeschakeld is (ook in Slave mode)\n0 = uit (dim = basis light compleet uitgeschakeld )\n-1 = gehele nacht (dim de gehele nacht wanneer de lamp uit is)",
-            "de": "0 - aus (dimmen = Grundlicht komplett deaktiviert) \r\n1-60 - Zeit[Minuten] (aktiviert im Nachtmodus, startet nach dem Ausschalten der Lampe nach der Bewegungserkennung) \r\n-1 - ganze Nacht (dimmen durch die ganze Nacht, wenn die Lampe ausgeschaltet ist) Dimmmodus ist auch deaktiviert, wenn die lokale Steuerung deaktiviert ist (sowie im Slave-Modus)"          },
+            "de": "0 - aus (dimmen = Grundlicht komplett deaktiviert) \r\n1-60 - Zeit[Minuten] (aktiviert im Nachtmodus, startet nach dem Ausschalten der Lampe nach der Bewegungserkennung) \r\n-1 - ganze Nacht (dimmen durch die ganze Nacht, wenn die Lampe ausgeschaltet ist) Dimmmodus ist auch deaktiviert, wenn die lokale Steuerung deaktiviert ist (sowie im Slave-Modus)"
+          },
           "zwave": {
             "index": 3,
             "size": 1
@@ -759,7 +773,6 @@
           "hint": {
             "en": "Value can be controlled via potentiometer – potentiometer value is\r\nused as the default value and any potentiometer movement rewrites\r\nthe current setting",
             "de": "Der Wert kann über das Potentiometer gesteuert werden - der Potentiometerwert wird als Standardwert verwendet und jede Potentiometerbewegung überschreibt die aktuelle Einstellung."
-
           },
           "zwave": {
             "index": 4,

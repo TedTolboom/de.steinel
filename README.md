@@ -17,8 +17,8 @@ Please file Pull Requests on the *development* branch of this repository and wit
 
 ## Supported Languages:
 * English   
+* German   
 * Dutch
-
 
 ## Acknowledgements:
 This app and driver development has been supported by:   
@@ -32,6 +32,11 @@ This app and driver development has been supported by:
  Any requests please post them in the [Steinel app topic on the Athom Community Forum](https://community.athom.com/t/167) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)   
 
 ## Change Log:
+### v 1.0.2  
+* Add German language support; contribution by Martin Pussamsies        
+**update:**   
+* Update Homey meshdriver to 1.2.32    
+
 ### v 1.0.1   
 * Add link to [Steinel app topic](https://community.athom.com/t/167) on community.athom.com   
 **update:**   
