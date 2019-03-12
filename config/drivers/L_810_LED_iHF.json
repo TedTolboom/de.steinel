@@ -61,7 +61,8 @@
 		"learnmode": {
 			"image": "/drivers/L_810_LED_iHF/assets/learnmode.svg",
 			"instruction": {
-				"en": "Inclusion = Add\r\nTo start the light's inclusion mode, briefly press button (8)\r\n\r\nAdding L 810 LED iHF to the Smart Friends system:\r\n1) Download Smart Friends app from the App Store.\r\n2) In the rooms view, activate the edit mode.\r\n3) Select the chosen room and press the \"Add device\" button.\r\n4) Briefly press the device's button (8) to set the light to inclusion mode. The status LED (12) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed."
+				"en": "Inclusion = Add\r\nTo start the light's inclusion mode, briefly press button (8)\r\n\r\nAdding L 810 LED iHF to the Smart Friends system:\r\n1) Download Smart Friends app from the App Store.\r\n2) In the rooms view, activate the edit mode.\r\n3) Select the chosen room and press the \"Add device\" button.\r\n4) Briefly press the device's button (8) to set the light to inclusion mode. The status LED (12) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed.",
+				"de": "Inklusion = Hinzufügenn\r\nUm den Inklusionsmodus des Lichts zu starten, drücke kurz die Taste (8)."
 			}
 		},
 		"productDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2309/110050438 BDAL L 810 LED IHF SMARTHOME D-GB-F-I-NL.pdf",
@@ -99,7 +100,7 @@
 		"unlearnmode": {
 			"instruction": {
 				"en": "Exclusion = Remove\r\nTo start the light's exclusion mode, briefly press button (8)\r\n\r\nRemoving L 810 LED iHF from the Smart Friends system:\r\n1) In the rooms view, activate the edit mode.\r\n2) Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3) Briefly press the device's button (8) to set the light to exclusion mode. The red status LED (12) lights up to show that this mode is selected.\r\n4) The app displays a confirmation message once exclusion has been successfully completed.",
-				"de": "Exklusion=Entfernen\r\nUm den Exklusionsmodus des Lichts zu starten, drücken Sie kurz die Taste (8)."
+				"de": "Exklusion=Entfernen\r\nUm den Exklusionsmodus des Lichts zu starten, drücke kurz die Taste (8)."
 			}
 		}
 	},
