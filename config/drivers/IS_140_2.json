@@ -50,7 +50,8 @@
 		"learnmode": {
 			"image": "/drivers/IS_140_2/assets/learnmode.svg",
 			"instruction": {
-				"en": "Inclusion = Add\r\n\r\nTo start the motion detector's inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\\r\n4) To put the device into inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The status LED (F) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed."
+				"en": "Inclusion = Add\r\n\r\nTo start the motion detector's inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\\r\n4) To put the device into inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The status LED (F) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed.",
+				"de": "Inklusion = Hinzufügen\r\n\r\n Um den Inklusionsmodus des Bewegungsmelders zu starten, drehe den Drehregler (E) auf \"Set\" und zurück zu  \"0\" innerhalb 5 Sekunden."
 			}
 		},
 		"productDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2310/IS140-2Z-Wave_5spr_110050437_11.04.17.pdf",
