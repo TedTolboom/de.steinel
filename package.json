@@ -4,8 +4,8 @@
 	"description": "Adds support for Steinel SmartHome products",
 	"main": "app.js",
 	"dependencies": {
-		"homey-log": "^1.0.3",
-		"homey-meshdriver": "^1.2.32"
+		"homey-log": "^1.0.6",
+		"homey-meshdriver": "^2.0.1"
 	},
 	"devDependencies": {},
 	"scripts": {
