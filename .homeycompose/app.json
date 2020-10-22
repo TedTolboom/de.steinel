@@ -1,0 +1,44 @@
+{
+  "id": "de.steinel",
+  "sdk": 2,
+  "name": {
+    "en": "Steinel Z-wave"
+  },
+  "description": {
+    "en": "Adds support for Steinel SmartHome products"
+  },
+  "category": "lights",
+  "version": "1.1.0",
+  "compatibility": ">=1.5.0",
+  "athomForumDiscussionId": 3834,
+  "homeyCommunityTopicId": 167,
+  "author": {
+    "name": "Ted Tolboom",
+    "email": "dTNL.Homey@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
+      }
+    ],
+    "translators": [
+      {
+        "name": "🇩🇪 Martin Pussamsies",
+        "email": "martin@pussamsies.de"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "TedTolboom"
+      }
+    }
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  }
+}

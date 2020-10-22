@@ -1,4 +1,5 @@
 {
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "de.steinel",
   "sdk": 2,
   "name": {
@@ -8,7 +9,7 @@
     "en": "Adds support for Steinel SmartHome products"
   },
   "category": "lights",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "compatibility": ">=1.5.0",
   "athomForumDiscussionId": 3834,
   "homeyCommunityTopicId": 167,
@@ -44,11 +45,11 @@
   "flow": {
     "triggers": [
       {
-        "id": "sensor_alarm_motion_on",
+        "id": "sensor_alarm_motion_off",
         "title": {
-          "en": "The motion alarm turned on",
-          "nl": "De bewegingsmelder gaat aan",
-          "de": "Bewegungs-Alarm ist angegangen"
+          "en": "The motion alarm turned off",
+          "nl": "De bewegingsmelder gaat uit",
+          "de": "Bewegungs-Alarm ist ausgegangen"
         },
         "args": [
           {
@@ -59,11 +60,11 @@
         ]
       },
       {
-        "id": "sensor_alarm_motion_off",
+        "id": "sensor_alarm_motion_on",
         "title": {
-          "en": "The motion alarm turned off",
-          "nl": "De bewegingsmelder gaat uit",
-          "de": "Bewegungs-Alarm ist ausgegangen"
+          "en": "The motion alarm turned on",
+          "nl": "De bewegingsmelder gaat aan",
+          "de": "Bewegungs-Alarm ist angegangen"
         },
         "args": [
           {
@@ -120,11 +121,11 @@
     ],
     "actions": [
       {
-        "id": "onoff_turn_on",
+        "id": "onoff_turn_off",
         "title": {
-          "en": "Turn on",
-          "nl": "Zet aan",
-          "de": "Einschalten"
+          "en": "Turn off",
+          "nl": "Zet uit",
+          "de": "Ausschalten"
         },
         "args": [
           {
@@ -135,11 +136,11 @@
         ]
       },
       {
-        "id": "onoff_turn_off",
+        "id": "onoff_turn_on",
         "title": {
-          "en": "Turn off",
-          "nl": "Zet uit",
-          "de": "Ausschalten"
+          "en": "Turn on",
+          "nl": "Zet aan",
+          "de": "Einschalten"
         },
         "args": [
           {
@@ -168,7 +169,6 @@
   },
   "drivers": [
     {
-      "id": "IS_140_2",
       "class": "light",
       "name": {
         "en": "IS 140-2 Z-Wave"
@@ -261,6 +261,7 @@
           }
         }
       },
+      "id": "IS_140_2",
       "settings": [
         {
           "id": "Light_duration",
@@ -591,7 +592,6 @@
       ]
     },
     {
-      "id": "L_810_LED_iHF",
       "class": "light",
       "name": {
         "en": "L 810 LED iHF Z-Wave"
@@ -695,6 +695,7 @@
           }
         }
       },
+      "id": "L_810_LED_iHF",
       "settings": [
         {
           "id": "Light_duration",
@@ -1046,7 +1047,6 @@
       ]
     },
     {
-      "id": "RS_LED_D2",
       "class": "light",
       "name": {
         "en": "RS LED D2 Z-Wave"
@@ -1139,6 +1139,7 @@
           }
         }
       },
+      "id": "RS_LED_D2",
       "settings": [
         {
           "id": "Light_duration",
@@ -1469,7 +1470,6 @@
       ]
     },
     {
-      "id": "XLED_home_2",
       "class": "light",
       "name": {
         "en": "XLED home 2 Z-Wave"
@@ -1562,6 +1562,7 @@
           }
         }
       },
+      "id": "XLED_home_2",
       "settings": [
         {
           "id": "Light_duration",

@@ -32,6 +32,9 @@ This app and driver development has been supported by:
  Any requests please post them in the [Steinel app topic on the Athom Community Forum](https://community.athom.com/t/167) or contact me on [Slack](https://athomcommunity.slack.com/team/tedtolboom)   
 
 ## Change Log:
+### v 1.1.0  
+* Update Homey meshdriver to latest version to prevent false positives       
+
 ### v 1.0.3  
 * Add German inclustion; contribution by Martin Pussamsies        
 
