@@ -1,0 +1,94 @@
+{
+  "class": "light",
+  "name": {
+    "en": "RS LED D2 Z-Wave"
+  },
+  "capabilities": [
+    "onoff",
+    "measure_luminance",
+    "alarm_motion"
+  ],
+  "images": {
+    "large": "/drivers/RS_LED_D2/assets/images/large.png",
+    "small": "/drivers/RS_LED_D2/assets/images/small.png"
+  },
+  "mobile": {
+    "components": [
+      {
+        "id": "icon",
+        "capabilities": [
+          "onoff"
+        ]
+      },
+      {
+        "id": "sensor",
+        "capabilities": [
+          "measure_luminance",
+          "alarm_motion"
+        ]
+      },
+      {
+        "id": "toggle",
+        "capabilities": [
+          "onoff"
+        ]
+      }
+    ]
+  },
+  "zwave": {
+    "manufacturerId": [
+      625
+    ],
+    "productTypeId": [
+      1
+    ],
+    "productId": [
+      6772
+    ],
+    "wakeUpInterval": 3600,
+    "learnmode": {
+      "image": "/drivers/RS_LED_D2/assets/learnmode.svg",
+      "instruction": {
+        "en": "Inclusion: Add\r\n\r\nAdding RS LED D2 to the Smart Friends system:\r\n1 Download Smart Friends app from the app store.\r\n2 In the rooms view, activate the edit mode.\r\n3 Select the chosen room and press the \"Add device\" button.\r\n4 Briefly press button 5 on the device to set it to inclusion mode. Status LED 8 lights up to show that this mode is selected.\r\n5 The app displays a confirmation message once inclusion has been successfully completed.",
+        "de": "Inkludieren: Hinzufügen\r\n\r\nRS LED D2 Drücken kurz die Taste 5 am Gerät, um es in den Inklusions-Modus zu versetzen. Die Status-LED 8 leuchtet auf, um anzuzeigen, dass dieser Modus ausgewählt ist. "
+      }
+    },
+    "productDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2243/RSLEDD2Z-Wave_5spr_110054844_11.04.17.pdf",
+    "zwaveAllianceProductId": 2243,
+    "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17035489",
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline group"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Group 2 is used for directly controlling Z-Wave devices via BASIC SET commands through the evaluation of movement and light as with internal use (so that all of these devices work together). This is intended for use especially with third-party devices that do not implement reactions for mo- tion events.",
+          "de": "Gruppe 2 dient zur direkten Steuerung von Z-Wave-Geräten über BASIC SET-Befehle durch die Auswertung von Bewegung und Licht wie beim internen Gebrauch (so dass alle diese Geräte zusammenwirken). Dies ist insbesondere für den Einsatz mit Geräten von Drittanbietern vorgesehen, die keine Implementierung für Bewegungsmelder haben."
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Group 3 sends Notification reports (MOTION_BEGIN and MOTION_END frames)",
+          "de": "Gruppe 3 sendet Notification reports (MOTION_BEGIN and MOTION_END frames)"
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "Ambient Light via group 4 is intended to substitute locally measured LUX values in target devices – so that the network can have one source of ambient light value. The frame rate is a value being sent a maximum of once per 2.5 minutes, and a minimum of once per 15 minutes.",
+          "de": "Ambient Light über Gruppe 4 soll lokal gemessene LUX-Werte in den Zielgeräten ersetzen - so dass das Netzwerk eine Quelle für den Umgebungslichtwert haben kann. Die frame rate ist ein Wert, der maximal einmal pro 2,5 Minuten und mindestens einmal pro 15 Minuten gesendet wird."
+        }
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Exclusion: Remove\r\n\r\nRemoving RS LED D2 from the Smart Friends system:\r\n1 In the rooms view, activate the edit mode.\r\n2. Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3 Briefly press button e on the device to set it to exclusion mode. The red status LED h lights up to show that this mode is selected.\r\n4 The app displays a confirmation message once exclusion has been successfully completed.\r\n\r\n",
+        "de": "Exklusion: Entfernen\r\n\r\nRS LED D2 Drücke kurz die Taste e am Gerät, um es in den Exklusionsmodus zu versetzen. Die rote Status-LED h leuchtet auf, um anzuzeigen, dass dieser Modus ausgewählt ist."
+      }
+    }
+  }
+}

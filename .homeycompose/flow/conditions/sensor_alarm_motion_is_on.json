@@ -1,0 +1,15 @@
+{
+  "id": "sensor_alarm_motion_is_on",
+  "title": {
+    "en": "The motion alarm is !{{on|off}}",
+    "nl": "De bewegingsmelder is !{{aan|uit}}",
+    "de": "Der Bewegungs-Alarm ist !{{an|aus}}"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=IS_140_2|L_810L_810_LED_iHF|RS_LED_D2|XLED_home_2"
+    }
+  ]
+}

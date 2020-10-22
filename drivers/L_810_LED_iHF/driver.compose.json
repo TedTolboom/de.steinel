@@ -1,0 +1,105 @@
+{
+  "class": "light",
+  "name": {
+    "en": "L 810 LED iHF Z-Wave"
+  },
+  "capabilities": [
+    "onoff",
+    "dim",
+    "measure_luminance",
+    "alarm_motion"
+  ],
+  "capabilitiesOptions": {
+    "onoff": {
+      "setOnDim": false
+    },
+    "dim": {
+      "opts": {
+        "duration": true
+      }
+    }
+  },
+  "images": {
+    "large": "/drivers/L_810_LED_iHF/assets/images/large.png",
+    "small": "/drivers/L_810_LED_iHF/assets/images/small.png"
+  },
+  "mobile": {
+    "components": [
+      {
+        "id": "icon",
+        "capabilities": [
+          "onoff"
+        ]
+      },
+      {
+        "id": "sensor",
+        "capabilities": [
+          "measure_luminance",
+          "alarm_motion"
+        ]
+      },
+      {
+        "id": "slider",
+        "capabilities": [
+          "dim"
+        ]
+      }
+    ]
+  },
+  "zwave": {
+    "manufacturerId": [
+      625
+    ],
+    "productTypeId": [
+      1
+    ],
+    "productId": [
+      6773
+    ],
+    "wakeUpInterval": 3600,
+    "learnmode": {
+      "image": "/drivers/L_810_LED_iHF/assets/learnmode.svg",
+      "instruction": {
+        "en": "Inclusion = Add\r\nTo start the light's inclusion mode, briefly press button (8)\r\n\r\nAdding L 810 LED iHF to the Smart Friends system:\r\n1) Download Smart Friends app from the App Store.\r\n2) In the rooms view, activate the edit mode.\r\n3) Select the chosen room and press the \"Add device\" button.\r\n4) Briefly press the device's button (8) to set the light to inclusion mode. The status LED (12) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed.",
+        "de": "Inklusion = Hinzufügenn\r\nUm den Inklusionsmodus des Lichts zu starten, drücke kurz die Taste (8)."
+      }
+    },
+    "productDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2309/110050438 BDAL L 810 LED IHF SMARTHOME D-GB-F-I-NL.pdf",
+    "zwaveAllianceProductId": 2309,
+    "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17045557",
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline group"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Group 2 is used for directly controlling Z-Wave devices via BASIC SET commands through the evaluation of movement and light as with internal use (so that all of these devices work together). This is intended for use especially with third-party devices that do not implement reactions for mo- tion events.",
+          "de": "Gruppe 2 dient zur direkten Steuerung von Z-Wave-Geräten über BASIC SET-Befehle durch die Auswertung von Bewegung und Licht wie beim internen Gebrauch (so dass alle diese Geräte zusammenwirken). Dies ist insbesondere für den Einsatz mit Geräten von Drittanbietern vorgesehen, die keine Implementierung für Bewegungsmelder haben."
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Group 3 sends Notification reports (MOTION_BEGIN and MOTION_END frames)",
+          "de": "Gruppe 3 sendet Notification reports (MOTION_BEGIN and MOTION_END frames)"
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "Ambient Light via group 4 is intended to substitute locally measured LUX values in target devices – so that the network can have one source of ambient light value. The frame rate is a value being sent a maximum of once per 2.5 minutes, and a minimum of once per 15 minutes.",
+          "de": "Ambient Light über Gruppe 4 soll lokal gemessene LUX-Werte in den Zielgeräten ersetzen - so dass das Netzwerk eine Quelle für den Umgebungslichtwert haben kann. Die frame rate ist ein Wert, der maximal einmal pro 2,5 Minuten und mindestens einmal pro 15 Minuten gesendet wird."
+        }
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Exclusion = Remove\r\nTo start the light's exclusion mode, briefly press button (8)\r\n\r\nRemoving L 810 LED iHF from the Smart Friends system:\r\n1) In the rooms view, activate the edit mode.\r\n2) Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3) Briefly press the device's button (8) to set the light to exclusion mode. The red status LED (12) lights up to show that this mode is selected.\r\n4) The app displays a confirmation message once exclusion has been successfully completed.",
+        "de": "Exklusion=Entfernen\r\nUm den Exklusionsmodus des Lichts zu starten, drücke kurz die Taste (8)."
+      }
+    }
+  }
+}

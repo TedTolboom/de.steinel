@@ -1,0 +1,94 @@
+{
+  "class": "light",
+  "name": {
+    "en": "IS 140-2 Z-Wave"
+  },
+  "capabilities": [
+    "onoff",
+    "measure_luminance",
+    "alarm_motion"
+  ],
+  "images": {
+    "large": "/drivers/IS_140_2/assets/images/large.png",
+    "small": "/drivers/IS_140_2/assets/images/small.png"
+  },
+  "mobile": {
+    "components": [
+      {
+        "id": "icon",
+        "capabilities": [
+          "onoff"
+        ]
+      },
+      {
+        "id": "sensor",
+        "capabilities": [
+          "measure_luminance",
+          "alarm_motion"
+        ]
+      },
+      {
+        "id": "toggle",
+        "capabilities": [
+          "onoff"
+        ]
+      }
+    ]
+  },
+  "zwave": {
+    "manufacturerId": [
+      625
+    ],
+    "productTypeId": [
+      2
+    ],
+    "productId": [
+      6770
+    ],
+    "wakeUpInterval": 3600,
+    "learnmode": {
+      "image": "/drivers/IS_140_2/assets/learnmode.svg",
+      "instruction": {
+        "en": "Inclusion = Add\r\n\r\nTo start the motion detector's inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\\r\n4) To put the device into inclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The status LED (F) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed.",
+        "de": "Inklusion = Hinzufügen\r\n\r\n Um den Inklusionsmodus des Bewegungsmelders zu starten, drehe den Drehregler (E) auf \"Set\" und zurück zu  \"0\" innerhalb 5 Sekunden."
+      }
+    },
+    "productDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2310/IS140-2Z-Wave_5spr_110050437_11.04.17.pdf",
+    "zwaveAllianceProductId": 2310,
+    "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17045540",
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline group"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Group 2 is used for directly controlling Z-Wave devices via BASIC SET commands through the evaluation of movement and light as with internal use (so that all of these devices work together). This is intended for use especially with third-party devices that do not implement reactions for mo- tion events.",
+          "de": "Gruppe 2 dient zur direkten Steuerung von Z-Wave-Geräten über BASIC SET-Befehle durch die Auswertung von Bewegung und Licht wie beim internen Gebrauch (so dass alle diese Geräte zusammenwirken). Dies ist insbesondere für den Einsatz mit Geräten von Drittanbietern vorgesehen, die keine Implementierung für Bewegungsmelder haben."
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Group 3 sends Notification reports (MOTION_BEGIN and MOTION_END frames)",
+          "de": "Gruppe 3 sendet Notification reports (MOTION_BEGIN and MOTION_END frames)"
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "Ambient Light via group 4 is intended to substitute locally measured LUX values in target devices – so that the network can have one source of ambient light value. The frame rate is a value being sent a maximum of once per 2.5 minutes, and a minimum of once per 15 minutes.",
+          "de": "Ambient Light über Gruppe 4 soll lokal gemessene LUX-Werte in den Zielgeräten ersetzen - so dass das Netzwerk eine Quelle für den Umgebungslichtwert haben kann. Die frame rate ist ein Wert, der maximal einmal pro 2,5 Minuten und mindestens einmal pro 15 Minuten gesendet wird."
+        }
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Exclusion = Remove\r\n\r\nTo start the motion detector's exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\r\nRemoving IS 140-2 from the Smart Friends system:\r\n1) In the rooms view, activate the edit mode.\r\n2) Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3) To put the device into exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The red status LED (F) lights up to show that this mode is selected.\r\n4) The app displays a confirmation message once exclusion has been successfully completed.",
+        "de": "Exclusion = Entfernen\r\n\r\n Um den Exklusionsmodus des Bewegungsmelders zu starten, drehe den Drehregler (E) auf \"Set\" und zurück zu  \"0\" innerhalb 5 Sekunden."
+      }
+    }
+  }
+}

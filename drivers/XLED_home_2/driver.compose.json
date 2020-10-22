@@ -1,0 +1,94 @@
+{
+  "class": "light",
+  "name": {
+    "en": "XLED home 2 Z-Wave"
+  },
+  "capabilities": [
+    "onoff",
+    "measure_luminance",
+    "alarm_motion"
+  ],
+  "images": {
+    "large": "/drivers/XLED_home_2/assets/images/large.png",
+    "small": "/drivers/XLED_home_2/assets/images/small.png"
+  },
+  "mobile": {
+    "components": [
+      {
+        "id": "icon",
+        "capabilities": [
+          "onoff"
+        ]
+      },
+      {
+        "id": "sensor",
+        "capabilities": [
+          "measure_luminance",
+          "alarm_motion"
+        ]
+      },
+      {
+        "id": "toggle",
+        "capabilities": [
+          "onoff"
+        ]
+      }
+    ]
+  },
+  "zwave": {
+    "manufacturerId": [
+      625
+    ],
+    "productTypeId": [
+      1
+    ],
+    "productId": [
+      6771
+    ],
+    "wakeUpInterval": 3600,
+    "learnmode": {
+      "image": "/drivers/XLED_home_2/assets/learnmode.svg",
+      "instruction": {
+        "en": "To put the device into inclusion mode, turn the device's control dial (F) to \"Set\" and back to \"0\" within 5 seconds. The status LED (G) lights up to show that this mode is selected.\r\n\r\n\r\nAdding XLED home 2 to the Smart Friends system:\r\n1) Download the Smart Friends app from the app store.\r\n2) In the rooms view, activate the edit mode.\r\n3) Select the chosen room and press the \"Add device\" button.\r\n4) To put the device into inclusion mode, turn the device's control dial (F) to \"Set\" and back to \"0\" within 5 seconds. The status LED (G) lights up to show that this mode is selected.\r\n5) The app displays a confirmation message once inclusion has been successfully completed.",
+        "de": "Um das Gerät in den Inklusionsmodus zu versetzen, drehe das Einstellrad (F) auf \"Set\" und dann auf \"0\" zurück innerhalb 5 Sekunden. Die Status LED (G) Leuchtet auf."
+      }
+    },
+    "productDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2290/XLEDhome2Z-Wave_5spr_110050436_11.04.17.LowRes.pdf",
+    "zwaveAllianceProductId": 2290,
+    "imageRemotePath": "https://products.z-wavealliance.org/ProductImages/Index?productName=ZC10-17045541",
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline group"
+        }
+      },
+      "2": {
+        "hint": {
+          "en": "Group 2 is used for directly controlling Z-Wave devices via BASIC SET commands through the evaluation of movement and light as with internal use (so that all of these devices work together). This is intended for use especially with third-party devices that do not implement reactions for mo- tion events.",
+          "de": "Gruppe 2 dient zur direkten Steuerung von Z-Wave-Geräten über BASIC SET-Befehle durch die Auswertung von Bewegung und Licht wie beim internen Gebrauch (so dass alle diese Geräte zusammenwirken). Dies ist insbesondere für den Einsatz mit Geräten von Drittanbietern vorgesehen, die keine Implementierung für Bewegungsmelder haben."
+        }
+      },
+      "3": {
+        "hint": {
+          "en": "Group 3 sends Notification reports (MOTION_BEGIN and MOTION_END frames)",
+          "de": "Gruppe 3 sendet Notification reports (MOTION_BEGIN and MOTION_END frames)"
+        }
+      },
+      "4": {
+        "hint": {
+          "en": "Ambient Light via group 4 is intended to substitute locally measured LUX values in target devices – so that the network can have one source of ambient light value. The frame rate is a value being sent a maximum of once per 2.5 minutes, and a minimum of once per 15 minutes.",
+          "de": "Ambient Light über Gruppe 4 soll lokal gemessene LUX-Werte in den Zielgeräten ersetzen - so dass das Netzwerk eine Quelle für den Umgebungslichtwert haben kann. Die frame rate ist ein Wert, der maximal einmal pro 2,5 Minuten und mindestens einmal pro 15 Minuten gesendet wird."
+        }
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "To put the device into exclusion mode, turn the device's control dial (F) to \"Set\" and back to \"0\" within 5 seconds. The red status LED (G) lights up to show that this mode is selected.\r\n\r\n\r\nRemoving XLED home 2 from the Smart Friends system:\r\n1) In the rooms view, activate the edit mode.\r\n2) Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3) To put the device into exclusion mode, turn the device's control dial (F) to \"Set\" and back to \"0\" within 5 seconds. The red status LED (G) lights up to show that this mode is selected.\r\n4) The app displays a confirmation message once exclusion has been successfully completed.",
+        "de": "Um das Gerät in den Exklusionsmodus zu versetzen, drehe das Einstellrad (F) auf \"Set\" und dann auf \"0\" zurück innerhalb 5 Sekunden. Die Status LED (G) Leuchtet auf."
+      }
+    }
+  }
+}
