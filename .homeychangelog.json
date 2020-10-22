@@ -1,0 +1,5 @@
+{
+  "1.1.0": {
+    "en": "Update Homey meshdriver to latest version to prevent false positives"
+  }
+}
