@@ -5,7 +5,7 @@
 	"main": "app.js",
 	"dependencies": {
 		"homey-log": "^1.0.6",
-		"homey-meshdriver": "^2.0.1"
+		"homey-meshdriver": "^2.0.2"
 	},
 	"devDependencies": {},
 	"scripts": {

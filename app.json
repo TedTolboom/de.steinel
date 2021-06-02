@@ -382,7 +382,7 @@
             "de": "Deaktiviere lokale Steuerung"
           },
           "hint": {
-            "en": "Pas deze optie met beleid toe\nLees voor gebruik van deze optie de handleiding",
+            "en": "Be careful with this option, lamp stops using it’s own motion sensor in Slave and Stupid mode.",
             "de": "Damit ist es möglich den Bewegungsmelder zu deaktivieren."
           },
           "zwave": {
