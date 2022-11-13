@@ -1,6 +1,6 @@
 {
   "id": "de.steinel",
-  "sdk": 2,
+  "sdk": 3,
   "name": {
     "en": "Steinel Z-wave"
   },
@@ -8,10 +8,15 @@
     "en": "Adds support for Steinel SmartHome products"
   },
   "category": "lights",
-  "version": "1.1.0",
-  "compatibility": ">=1.5.0",
+  "version": "1.2.0",
+  "compatibility": ">=5.0.0",
+  "brandColor": "#ff8d00",
   "athomForumDiscussionId": 3834,
   "homeyCommunityTopicId": 167,
+    "support": "https://homey.app/a/de.steinel/",
+  "platforms": [
+    "local"
+  ],
   "author": {
     "name": "Ted Tolboom",
     "email": "dTNL.Homey@gmail.com"

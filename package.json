@@ -5,9 +5,8 @@
 	"main": "app.js",
 	"dependencies": {
 		"homey-log": "^1.0.6",
-		"homey-meshdriver": "^2.0.1"
+		"homey-zwavedriver": "^2.1.10"
 	},
-	"devDependencies": {},
 	"scripts": {
 		"run": "homeyConfig compose && athom project --run",
 		"test": "echo \"Error: no test specified\" && exit 1"

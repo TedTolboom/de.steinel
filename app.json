@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "de.steinel",
-  "sdk": 2,
+  "sdk": 3,
   "name": {
     "en": "Steinel Z-wave"
   },
@@ -9,10 +9,15 @@
     "en": "Adds support for Steinel SmartHome products"
   },
   "category": "lights",
-  "version": "1.1.0",
-  "compatibility": ">=1.5.0",
+  "version": "1.2.0",
+  "compatibility": ">=5.0.0",
+  "brandColor": "#ff8d00",
   "athomForumDiscussionId": 3834,
   "homeyCommunityTopicId": 167,
+  "support": "https://homey.app/a/de.steinel/",
+  "platforms": [
+    "local"
+  ],
   "author": {
     "name": "Ted Tolboom",
     "email": "dTNL.Homey@gmail.com"
@@ -178,32 +183,15 @@
         "measure_luminance",
         "alarm_motion"
       ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "images": {
         "large": "/drivers/IS_140_2/assets/images/large.png",
         "small": "/drivers/IS_140_2/assets/images/small.png"
-      },
-      "mobile": {
-        "components": [
-          {
-            "id": "icon",
-            "capabilities": [
-              "onoff"
-            ]
-          },
-          {
-            "id": "sensor",
-            "capabilities": [
-              "measure_luminance",
-              "alarm_motion"
-            ]
-          },
-          {
-            "id": "toggle",
-            "capabilities": [
-              "onoff"
-            ]
-          }
-        ]
       },
       "zwave": {
         "manufacturerId": [
@@ -256,7 +244,7 @@
         },
         "unlearnmode": {
           "instruction": {
-            "en": "Exclusion = Remove\r\n\r\nTo start the motion detector's exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\r\nRemoving IS 140-2 from the Smart Friends system:\r\n1) In the rooms view, activate the edit mode.\r\n2) Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3) To put the device into exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The red status LED (F) lights up to show that this mode is selected.\r\n4) The app displays a confirmation message once exclusion has been successfully completed.",
+            "en": "Exclusion = Remove\r\n\r\nTo start the motion detector's exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.",
             "de": "Exclusion = Entfernen\r\n\r\n Um den Exklusionsmodus des Bewegungsmelders zu starten, drehe den Drehregler (E) auf \"Set\" und zurück zu  \"0\" innerhalb 5 Sekunden."
           }
         }
@@ -612,32 +600,15 @@
           }
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "images": {
         "large": "/drivers/L_810_LED_iHF/assets/images/large.png",
         "small": "/drivers/L_810_LED_iHF/assets/images/small.png"
-      },
-      "mobile": {
-        "components": [
-          {
-            "id": "icon",
-            "capabilities": [
-              "onoff"
-            ]
-          },
-          {
-            "id": "sensor",
-            "capabilities": [
-              "measure_luminance",
-              "alarm_motion"
-            ]
-          },
-          {
-            "id": "slider",
-            "capabilities": [
-              "dim"
-            ]
-          }
-        ]
       },
       "zwave": {
         "manufacturerId": [
@@ -1056,32 +1027,15 @@
         "measure_luminance",
         "alarm_motion"
       ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "images": {
         "large": "/drivers/RS_LED_D2/assets/images/large.png",
         "small": "/drivers/RS_LED_D2/assets/images/small.png"
-      },
-      "mobile": {
-        "components": [
-          {
-            "id": "icon",
-            "capabilities": [
-              "onoff"
-            ]
-          },
-          {
-            "id": "sensor",
-            "capabilities": [
-              "measure_luminance",
-              "alarm_motion"
-            ]
-          },
-          {
-            "id": "toggle",
-            "capabilities": [
-              "onoff"
-            ]
-          }
-        ]
       },
       "zwave": {
         "manufacturerId": [
@@ -1479,32 +1433,15 @@
         "measure_luminance",
         "alarm_motion"
       ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
       "images": {
         "large": "/drivers/XLED_home_2/assets/images/large.png",
         "small": "/drivers/XLED_home_2/assets/images/small.png"
-      },
-      "mobile": {
-        "components": [
-          {
-            "id": "icon",
-            "capabilities": [
-              "onoff"
-            ]
-          },
-          {
-            "id": "sensor",
-            "capabilities": [
-              "measure_luminance",
-              "alarm_motion"
-            ]
-          },
-          {
-            "id": "toggle",
-            "capabilities": [
-              "onoff"
-            ]
-          }
-        ]
       },
       "zwave": {
         "manufacturerId": [
