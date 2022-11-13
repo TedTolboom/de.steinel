@@ -8,32 +8,11 @@
     "measure_luminance",
     "alarm_motion"
   ],
+  "platforms": ["local"],
+  "connectivity": [ "zwave" ],
   "images": {
     "large": "/drivers/IS_140_2/assets/images/large.png",
     "small": "/drivers/IS_140_2/assets/images/small.png"
-  },
-  "mobile": {
-    "components": [
-      {
-        "id": "icon",
-        "capabilities": [
-          "onoff"
-        ]
-      },
-      {
-        "id": "sensor",
-        "capabilities": [
-          "measure_luminance",
-          "alarm_motion"
-        ]
-      },
-      {
-        "id": "toggle",
-        "capabilities": [
-          "onoff"
-        ]
-      }
-    ]
   },
   "zwave": {
     "manufacturerId": [
@@ -86,7 +65,7 @@
     },
     "unlearnmode": {
       "instruction": {
-        "en": "Exclusion = Remove\r\n\r\nTo start the motion detector's exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.\r\n\r\nRemoving IS 140-2 from the Smart Friends system:\r\n1) In the rooms view, activate the edit mode.\r\n2) Select the device in the chosen room and press the \"delete\" button. Press delete and follow the instructions in the app.\r\n3) To put the device into exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds. The red status LED (F) lights up to show that this mode is selected.\r\n4) The app displays a confirmation message once exclusion has been successfully completed.",
+        "en": "Exclusion = Remove\r\n\r\nTo start the motion detector's exclusion mode, turn the device's control dial (E) to \"Set\" and back to \"0\" within 5 seconds.",
         "de": "Exclusion = Entfernen\r\n\r\n Um den Exklusionsmodus des Bewegungsmelders zu starten, drehe den Drehregler (E) auf \"Set\" und zurück zu  \"0\" innerhalb 5 Sekunden."
       }
     }

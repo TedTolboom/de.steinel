@@ -8,32 +8,11 @@
     "measure_luminance",
     "alarm_motion"
   ],
+  "platforms": ["local"],
+  "connectivity": [ "zwave" ],
   "images": {
     "large": "/drivers/RS_LED_D2/assets/images/large.png",
     "small": "/drivers/RS_LED_D2/assets/images/small.png"
-  },
-  "mobile": {
-    "components": [
-      {
-        "id": "icon",
-        "capabilities": [
-          "onoff"
-        ]
-      },
-      {
-        "id": "sensor",
-        "capabilities": [
-          "measure_luminance",
-          "alarm_motion"
-        ]
-      },
-      {
-        "id": "toggle",
-        "capabilities": [
-          "onoff"
-        ]
-      }
-    ]
   },
   "zwave": {
     "manufacturerId": [
